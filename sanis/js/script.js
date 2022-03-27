@@ -15,7 +15,7 @@ testWebP(function (support) {
 		document.querySelector('body').classList.add('no-webp');
 	}
 });
-;
+
 // Появление формы поиска
 
 let headerSearchBtn = document.querySelector('.header__search_btn');
@@ -75,4 +75,19 @@ window.addEventListener('resize', () => {
         headerSearchWr.append(headerSearchForm);
         document.querySelector('.header__bottom_content').insertBefore(headerCounts, document.querySelector('.header__icons_search'));
     }
-});;
+});
+new Swiper('.main_slider', {
+    speed: 1000,
+    slidesPerView: 1,
+    navigation: {
+        nextEl: '.main_slider__btn-next',
+        prevEl: '.main_slider__btn-prev'
+    },
+    pagination: {
+        el: '.main_slider__pagination',
+        clickable: true,
+    },
+    autoplay: {
+        delay: 6850,
+    },
+});
