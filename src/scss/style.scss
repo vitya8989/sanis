@@ -1,0 +1,33 @@
+@import "null";
+@import "variables";
+
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@import "fonts";
+
+html {
+	font-size: 10px;
+}
+body {
+	font-size: 1.6rem;
+	line-height: 1.5;
+	font-family: Nunito;
+	font-weight: 300;
+	color: #000000;
+}
+
+.container {
+	max-width: 1560px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+@import "../components/header/header";
