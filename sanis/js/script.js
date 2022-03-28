@@ -15,7 +15,7 @@ testWebP(function (support) {
 		document.querySelector('body').classList.add('no-webp');
 	}
 });
-
+;
 // Появление формы поиска
 
 let headerSearchBtn = document.querySelector('.header__search_btn');
@@ -35,7 +35,7 @@ headerSearchBtn.onclick = (e) => {
     }
 };
 
-// Убиравем поиск по клику на проивольное место
+// Убираем поиск по клику на проивольное место
 
 wrapper.onclick = (e) => {
     if (!e.target.closest('.header__search') && !e.target.closest('.header__search_btn') && !headerSearchForm.classList.contains('this--hidden')) {
@@ -44,6 +44,21 @@ wrapper.onclick = (e) => {
         headerSearchInput.value = '';
     }
 }
+
+// Добавляем активный класс кнопкам
+
+let headerProfileBtn = document.querySelector('.header__profile_btn');
+let headerBasketBtn = document.querySelector('.header__basket_btn');
+
+headerProfileBtn.onclick = (e) => {
+    e.preventDefault();
+    headerProfileBtn.classList.toggle('active');
+};
+
+headerBasketBtn.onclick = (e) => {
+    e.preventDefault();
+    headerBasketBtn.classList.toggle('active');
+};
 
 // Бургер и мобильное меню
 
@@ -75,7 +90,7 @@ window.addEventListener('resize', () => {
         headerSearchWr.append(headerSearchForm);
         document.querySelector('.header__bottom_content').insertBefore(headerCounts, document.querySelector('.header__icons_search'));
     }
-});
+});;
 new Swiper('.main_slider', {
     speed: 1000,
     slidesPerView: 1,
@@ -90,4 +105,13 @@ new Swiper('.main_slider', {
     autoplay: {
         delay: 6850,
     },
-});
+});;
+// Кнопка "Показать всех"
+
+let partnersBtn = document.querySelector('.partners__btn');
+let partnersItems = document.querySelector('.partners__items');
+
+partnersBtn.onclick = () => {
+    partnersItems.classList.remove('this--limited');
+    partnersBtn.classList.add('this--hidden');
+};

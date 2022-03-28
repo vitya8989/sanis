@@ -1,0 +1,44 @@
+.three_steps__items {
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-bottom: -40px;
+  @media ($tablet2) {
+    margin-top: 20px;
+  }
+  @media ($tablet3) {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+}
+
+.three_steps__item {
+  margin-bottom: 40px;
+  margin-left: 20px;
+  width: calc(100% / 3 - 20px);
+  @media ($tablet3) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.three_steps__item_img {
+  text-align: center;
+}
+
+.three_steps__item_text {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.three_steps__item_btn {
+  margin: 25px auto 0;
+  @media ($tablet3) {
+    margin: 5px auto 0;
+  }
+}

@@ -70,6 +70,7 @@
 .header__logo_text {
   display: flex;
   max-width: 550px;
+  align-items: center;
   flex: 1 1 auto;
   @media ($desktop) {
     flex: 0 1 auto;
@@ -82,14 +83,16 @@
 .header__logo {
   margin-right: 30px;
   @media ($desktopBig) {
-    margin-right: 20px;
+    margin-right: 15px;
   }
   @media ($tablet2) {
     margin-right: 30px;
   }
 }
-.header__text {
-  margin-top: 28px;
+.header__title {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
   @media ($desktop) {
     display: none;
   }
@@ -100,19 +103,17 @@
   @media ($mobile) {
     display: none;
   }
+
+  span {
+    display: block;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: #F9C859;
+  }
 }
-.header__text_top {
-  font-weight: 400;
-  font-size: 1.4rem;
-  line-height: 1.4;
-}
-.header__text_bottom {
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 1.4;
-  text-transform: uppercase;
-  color: #F9C859;
-}
+
 .header__counts {
   display: flex;
   align-items: center;
@@ -238,6 +239,7 @@
   }
   &.active {
     background-color: #F9C859;
+    border: 2px solid #F9C859;
   }
   @media ($desktopBig) {
     margin-left: 15px;
@@ -320,7 +322,7 @@
     position: fixed;
     left: 0;
     top: 40px;
-    width: 100vw;
+    width: 100%;
     background: #ffffff;
     visibility: hidden;
     opacity: 1;
@@ -360,38 +362,7 @@
     display: none;
   }
 }
-.header__catalog_btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 30px;
-  border: 2px solid #F9C859;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 1.4rem;
-  line-height: 1.4;
-  text-transform: uppercase;
-  position: relative;
-  overflow: hidden;
 
-  span {
-    position: relative;
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    height: 0;
-    opacity: 0;
-    width: 102%;
-    background: #F9C859;
-    transition: 0.3s;
-    z-index: 0;
-  }
-}
 .header__bottom_items {
   height: 48px;
   display: flex;
