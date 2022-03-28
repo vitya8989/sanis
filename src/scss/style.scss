@@ -22,6 +22,10 @@ body {
 	font-family: Nunito;
 	font-weight: 300;
 	color: #000000;
+
+	&.this--overflow {
+		overflow: hidden;
+	}
 }
 
 .container {
@@ -37,30 +41,6 @@ body {
 	}
 }
 
-h2 {
-	font-weight: 600;
-	font-size: 3rem;
-	line-height: 1.33;
-	text-align: center;
-	text-transform: uppercase;
-	position: relative;
-
-	@media ($tablet2) {
-		font-size: 2.4rem;
-	}
-
-	&::before {
-		content: '';
-		position: absolute;
-		width: 60px;
-		height: 2px;
-		top: -15px;
-		left: 50%;
-		transform: translateX(-50%);
-		background: #F9C859;
-	}
-}
-
 .section {
 	padding: 60px 0;
 	@media ($tablet2) {
@@ -69,9 +49,19 @@ h2 {
 }
 
 @import "./blocks/btn";
+@import "./blocks/title";
+@import "./blocks/item_cards";
 
 @import "../components/header/header";
 @import "../components/main_slider/main_slider";
 @import "../components/partners/partners";
 @import "../components/three_steps/three_steps";
 @import "../components/about/about";
+@import "../components/counts/counts";
+@import "../components/benefits/benefits";
+@import "../components/main_video/main_video";
+@import "../components/novelties/novelties";
+@import "../components/banner/banner";
+@import "../components/main_catalog/main_catalog";
+@import "../components/main_news/main_news";
+@import "../components/footer/footer";

@@ -1,21 +1,3 @@
-function testWebP(callback) {
-
-	var webP = new Image();
-	webP.onload = webP.onerror = function () {
-		callback(webP.height == 2);
-	};
-	webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
-
-testWebP(function (support) {
-
-	if (support == true) {
-		document.querySelector('body').classList.add('webp');
-	} else {
-		document.querySelector('body').classList.add('no-webp');
-	}
-});
-;
 // Появление формы поиска
 
 let headerSearchBtn = document.querySelector('.header__search_btn');
@@ -66,6 +48,7 @@ let headerBurger = document.querySelector('.header__burger');
 let mobileMenu = document.querySelector('.header__bottom_menu ');
 
 headerBurger.onclick = function () {
+    document.body.classList.toggle('this--overflow');
     headerBurger.classList.toggle('burger-open');
     mobileMenu.classList.toggle('menu-open');
 }
@@ -120,8 +103,8 @@ let aboutSlider = new Swiper('.about__slider', {
     slidesPerView: "auto",
     spaceBetween: 20,
     navigation: {
-        nextEl: '.about__slider__btn-next',
-        prevEl: '.about__slider__btn-prev'
+        nextEl: '.about_slider__btn-next',
+        prevEl: '.about_slider__btn-prev'
     },
     breakpoints: {
         960: {
@@ -143,12 +126,108 @@ for (let i = 0; i < aboutDatesPoints.length; i++) {
         for (let j = 0; j <= i; j++) {
             aboutDatesPoints[j].classList.add('active');
         }
-        let blackLineWidth = (100 / aboutDatesPoints.length) * i + 8.7;
-        let pointsWidth = i * 12;
+        let blackLineWidth = (100 / aboutDatesPoints.length) * i + 8;
+        let pointsWidth = i * 7;
         if (i === aboutDatesPoints.length - 1) {
-            aboutDatesBlackLine.style.width = `calc(100% - 30px)`;
+            aboutDatesBlackLine.style.width = `calc(100% - 40px)`;
         } else {
-            aboutDatesBlackLine.style.width = `calc(${blackLineWidth}% + ${pointsWidth}px)`;
+            aboutDatesBlackLine.style.width = `calc(${blackLineWidth}% + ${pointsWidth}px - 20px)`;
         }
     }
+}
+
+aboutSlider.on('slideNextTransitionStart', function () {
+    for (let k = 0; k < aboutDatesPoints.length; k++) {
+        aboutDatesPoints[k].classList.remove('active');
+    }
+    for (let j = 0; j <= aboutSlider.activeIndex; j++) {
+        aboutDatesPoints[j].classList.add('active');
+    }
+    let blackLineWidth = (100 / aboutDatesPoints.length) * aboutSlider.activeIndex + 8;
+    let pointsWidth = aboutSlider.activeIndex * 7;
+    if (aboutSlider.activeIndex === aboutDatesPoints.length - 1) {
+        aboutDatesBlackLine.style.width = `calc(100% - 40px)`;
+    } else {
+        aboutDatesBlackLine.style.width = `calc(${blackLineWidth}% + ${pointsWidth}px - 20px)`;
+    }
+});
+
+aboutSlider.on('slidePrevTransitionStart', function () {
+    for (let k = 0; k < aboutDatesPoints.length; k++) {
+        aboutDatesPoints[k].classList.remove('active');
+    }
+    for (let j = 0; j <= aboutSlider.activeIndex; j++) {
+        aboutDatesPoints[j].classList.add('active');
+    }
+    let blackLineWidth = (100 / aboutDatesPoints.length) * aboutSlider.activeIndex + 8;
+    let pointsWidth = aboutSlider.activeIndex * 7;
+    if (aboutSlider.activeIndex === aboutDatesPoints.length - 1) {
+        aboutDatesBlackLine.style.width = `calc(100% - 40px)`;
+    } else {
+        aboutDatesBlackLine.style.width = `calc(${blackLineWidth}% + ${pointsWidth}px - 20px)`;
+    }
+});;
+let mainVideoVideo = document.querySelector('.main_video__video');
+let mainVideoBtn = document.querySelector('.main_video__btn');
+
+mainVideoBtn.onclick = () => {
+    mainVideoVideo.play();
+    mainVideoBtn.classList.add('this--hidden');
+}
+mainVideoVideo.onclick = () => {
+    mainVideoVideo.pause();
+    mainVideoBtn.classList.remove('this--hidden');
+}
+mainVideoVideo.onended = () => {
+    mainVideoBtn.classList.remove('this--hidden');
 };
+new Swiper('.novelties_slider', {
+    speed: 600,
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    navigation: {
+        nextEl: '.novelties_slider__btn-next',
+        prevEl: '.novelties_slider__btn-prev'
+    },
+    breakpoints: {
+        500: {
+            slidesPerView: 2,
+        },
+        640: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+        1024: {
+            slidesPerView: 4,
+        },
+        1600: {
+
+            slidesPerView: 5,
+        }
+    }
+});;
+let footerCopyright = document.querySelectorAll('.footer__copyright');
+let footerSocial = document.querySelectorAll('.footer__social');
+let footerContent = document.querySelectorAll('.footer__content');
+let footerMenuSocial = document.querySelectorAll('.footer__menu_social');
+
+if (window.innerWidth < 959) {
+    for (let i = 0; i < footerContent.length; i++) {
+        footerContent[i].append(footerCopyright[i]);
+        footerContent[i].append(footerSocial[i]);
+    }
+}
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth < 959) {
+        for (let i = 0; i < footerContent.length; i++) {
+            footerContent[i].append(footerCopyright[i]);
+            footerContent[i].append(footerSocial[i]);
+        }
+    } else {
+        for (let i = 0; i < footerContent.length; i++) {
+            footerMenuSocial[i].append(footerCopyright[i]);
+            footerMenuSocial[i].append(footerSocial[i]);
+        }
+    }
+});;

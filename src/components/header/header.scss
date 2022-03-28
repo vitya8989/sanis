@@ -75,10 +75,6 @@
   @media ($desktop) {
     flex: 0 1 auto;
   }
-  @media ($tablet2) {
-   position: relative;
-    z-index: 50;
-  }
 }
 .header__logo {
   margin-right: 30px;
@@ -319,11 +315,14 @@
 
 .header__bottom_menu {
   @media ($tablet2) {
+    min-height: calc(100vh - 40px);
+    max-height: calc(100vh - 40px);
     position: fixed;
+    overflow-y: auto;
     left: 0;
     top: 40px;
     width: 100%;
-    background: #ffffff;
+    background: url("/img/main/main_logo.png") 20px 20px / 110px 80px no-repeat ,#ffffff;
     visibility: hidden;
     opacity: 1;
     padding: 120px 20px 0;
@@ -334,6 +333,12 @@
       opacity: 1;
       transform: translateX(0);
     }
+  }
+}
+
+.header__bottom_mobile_bg {
+  @media ($tablet2) {
+    background: #ffffff;
   }
 }
 .header__catalog_btn_wr {
@@ -369,6 +374,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  list-style-type: none;
   margin: 0 -5px;
   @media ($desktop) {
     height: auto;
@@ -403,7 +409,7 @@
   }
   @media ($tablet3) {
     display: block;
-    column-count: 3;
+    column-count: 2;
   }
   @media ($mobile) {
     display: block;
@@ -416,7 +422,10 @@
     margin: 0 15px;
   }
   @media ($tablet2) {
-    margin: 0 14px 14px;
+    margin: 0 14px 12px;
+  }
+  @media ($tablet3) {
+    margin: 0 14px 12px 0;
   }
 }
 .header__bottom_link {

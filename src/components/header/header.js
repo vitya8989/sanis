@@ -48,6 +48,7 @@ let headerBurger = document.querySelector('.header__burger');
 let mobileMenu = document.querySelector('.header__bottom_menu ');
 
 headerBurger.onclick = function () {
+    document.body.classList.toggle('this--overflow');
     headerBurger.classList.toggle('burger-open');
     mobileMenu.classList.toggle('menu-open');
 }

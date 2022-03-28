@@ -1,0 +1,72 @@
+.novelties {
+  @media ($mobileMiddle) {
+    overflow: hidden;
+  }
+}
+
+.novelties__slider_wr {
+  position: relative;
+  margin-top: 35px;
+
+  @media ($tablet2) {
+    margin-top: 20px;
+  }
+}
+
+.novelties_slider__btn-next,
+.novelties_slider__btn-prev {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 39%;
+  transform: translateY(-50%);
+  z-index: 5;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+  background: url("/img/main/icons/arrow_slider.svg") center/ 14px 14px no-repeat;
+  &:hover {
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+    background: url("/img/main/icons/arrow_slider_hov.svg") center/ 14px 14px no-repeat, #ffffff;
+  }
+
+  @media ($desktopSuperBig) {
+    top: -40px;
+  }
+  @media ($tablet2) {
+    display: none;
+  }
+}
+
+.novelties_slider__btn-next {
+  right: -60px;
+  @media ($desktopSuperBig) {
+    right: 0;
+  }
+}
+
+.novelties_slider__btn-prev {
+  left: -60px;
+  transform: translateY(-50%) rotate(180deg);
+  @media ($desktopSuperBig) {
+    left: 0;
+  }
+}
+
+.novelties_slider__btn-next.swiper-button-disabled,
+.novelties_slider__btn-prev.swiper-button-disabled {
+  display: none;
+}
+
+.novelties_slider {
+  overflow: hidden;
+  @media ($mobileMiddle) {
+    overflow: visible;
+  }
+}
+
+.novelties__slide {
+  @media ($mobileMiddle) {
+    max-width: 160px;
+  }
+}

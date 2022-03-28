@@ -1,0 +1,120 @@
+.main_news__items {
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-bottom: -20px;
+  @media ($mobile) {
+    margin-left: 0;
+    margin-bottom: -25px;
+  }
+}
+.main_news__item {
+  width: calc(25% - 20px);
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+  @media ($desktop) {
+    width: calc(33.33333% - 20px);
+  }
+  @media ($tablet2) {
+    width: calc(50% - 20px);
+  }
+  @media ($mobile) {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+
+  &:hover {
+    .main_news__item_text {
+      color: #A27207;
+    }
+  }
+
+  &.this--big {
+    width: calc(50% - 20px);
+    position: relative;
+    @media ($desktop) {
+      width: calc(66.66666% - 20px);
+    }
+    @media ($tablet2) {
+      width: calc(50% - 20px);
+    }
+    @media ($mobile) {
+      width: 100%;
+    }
+    @media ($tablet2Max) {
+      .main_news__item_bottom {
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+        .main_news__item_text {
+          font-size: 2rem;
+          line-height: 1.4;
+          color: #FFFFFF;
+          padding-right: 20px;
+        }
+        .main_news__item_date {
+          font-size: 2rem;
+          line-height: 1.4;
+          color: #D1D1D1;
+        }
+      }
+      &:hover {
+        .main_news__item_text {
+          color: #F9C859;
+        }
+      }
+    }
+  }
+  &.this--desktop {
+    @media ($desktop) {
+      display: none;
+    }
+  }
+  &.this--tablet2 {
+    @media ($tablet2) {
+      display: none;
+    }
+  }
+}
+
+.main_news__item_img {
+  padding-top: 71.43%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.main_news__item_bottom {
+  margin-top: 10px;
+}
+
+.main_news__item_text {
+  color: #000000;
+  transition: 0.3s;
+  @media ($tablet2) {
+    font-size: 1.4rem;
+  }
+}
+
+.main_news__item_date {
+  margin-top: 5px;
+  color: #4A4A4A;
+  @media ($tablet2) {
+    font-size: 1.4rem;
+  }
+}
+
+.main_news__btn {
+  margin: 35px auto 0;
+}

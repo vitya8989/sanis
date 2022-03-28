@@ -3,8 +3,8 @@ let aboutSlider = new Swiper('.about__slider', {
     slidesPerView: "auto",
     spaceBetween: 20,
     navigation: {
-        nextEl: '.about__slider__btn-next',
-        prevEl: '.about__slider__btn-prev'
+        nextEl: '.about_slider__btn-next',
+        prevEl: '.about_slider__btn-prev'
     },
     breakpoints: {
         960: {
@@ -26,12 +26,44 @@ for (let i = 0; i < aboutDatesPoints.length; i++) {
         for (let j = 0; j <= i; j++) {
             aboutDatesPoints[j].classList.add('active');
         }
-        let blackLineWidth = (100 / aboutDatesPoints.length) * i + 8.7;
-        let pointsWidth = i * 12;
+        let blackLineWidth = (100 / aboutDatesPoints.length) * i + 8;
+        let pointsWidth = i * 7;
         if (i === aboutDatesPoints.length - 1) {
-            aboutDatesBlackLine.style.width = `calc(100% - 30px)`;
+            aboutDatesBlackLine.style.width = `calc(100% - 40px)`;
         } else {
-            aboutDatesBlackLine.style.width = `calc(${blackLineWidth}% + ${pointsWidth}px)`;
+            aboutDatesBlackLine.style.width = `calc(${blackLineWidth}% + ${pointsWidth}px - 20px)`;
         }
     }
 }
+
+aboutSlider.on('slideNextTransitionStart', function () {
+    for (let k = 0; k < aboutDatesPoints.length; k++) {
+        aboutDatesPoints[k].classList.remove('active');
+    }
+    for (let j = 0; j <= aboutSlider.activeIndex; j++) {
+        aboutDatesPoints[j].classList.add('active');
+    }
+    let blackLineWidth = (100 / aboutDatesPoints.length) * aboutSlider.activeIndex + 8;
+    let pointsWidth = aboutSlider.activeIndex * 7;
+    if (aboutSlider.activeIndex === aboutDatesPoints.length - 1) {
+        aboutDatesBlackLine.style.width = `calc(100% - 40px)`;
+    } else {
+        aboutDatesBlackLine.style.width = `calc(${blackLineWidth}% + ${pointsWidth}px - 20px)`;
+    }
+});
+
+aboutSlider.on('slidePrevTransitionStart', function () {
+    for (let k = 0; k < aboutDatesPoints.length; k++) {
+        aboutDatesPoints[k].classList.remove('active');
+    }
+    for (let j = 0; j <= aboutSlider.activeIndex; j++) {
+        aboutDatesPoints[j].classList.add('active');
+    }
+    let blackLineWidth = (100 / aboutDatesPoints.length) * aboutSlider.activeIndex + 8;
+    let pointsWidth = aboutSlider.activeIndex * 7;
+    if (aboutSlider.activeIndex === aboutDatesPoints.length - 1) {
+        aboutDatesBlackLine.style.width = `calc(100% - 40px)`;
+    } else {
+        aboutDatesBlackLine.style.width = `calc(${blackLineWidth}% + ${pointsWidth}px - 20px)`;
+    }
+});
