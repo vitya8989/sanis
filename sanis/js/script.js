@@ -206,6 +206,19 @@ new Swiper('.novelties_slider', {
         }
     }
 });;
+ymaps.ready(init);
+
+function init() {
+    var myMap = new ymaps.Map("map", {
+        center: [55.752648, 37.603846],
+        zoom: 17
+    });
+    var placemark = new ymaps.Placemark([55.752648, 37.603846], {
+            iconColor: 'blue'
+        }
+    );
+    myMap.geoObjects.add(placemark);
+};
 let footerCopyright = document.querySelectorAll('.footer__copyright');
 let footerSocial = document.querySelectorAll('.footer__social');
 let footerContent = document.querySelectorAll('.footer__content');
