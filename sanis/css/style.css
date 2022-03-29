@@ -266,9 +266,6 @@ h2::before {
   background: url(/img/main/icons/heart.svg) center/21px 19px no-repeat;
   z-index: 2
 }
-.item_card__favorite:hover {
-  background: url(/img/main/icons/heart_hov.svg) center/21px 19px no-repeat
-}
 .item_card__favorite.added_to_favorite {
   background: url(/img/main/icons/heart_active.svg) center/21px 19px no-repeat
 }
@@ -1803,6 +1800,9 @@ h2::before {
 @media (min-width:960px) {
   .item_card:hover .item_card__text {
     color: #a27207
+  }
+  .item_card__favorite:hover {
+    background: url(/img/main/icons/heart_hov.svg) center/21px 19px no-repeat
   }
   .header__bottom_link:hover {
     color: #f9c859
