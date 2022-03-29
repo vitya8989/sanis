@@ -95,7 +95,9 @@
   background: url("/img/main/icons/heart.svg") center / 21px 19px no-repeat;
   z-index: 2;
   &:hover {
-    background: url("/img/main/icons/heart_hov.svg") center / 21px 19px no-repeat;
+    @media ($tablet2Max) {
+      background: url("/img/main/icons/heart_hov.svg") center / 21px 19px no-repeat;
+    }
   }
   &.added_to_favorite {
     background: url("/img/main/icons/heart_active.svg") center / 21px 19px no-repeat;
