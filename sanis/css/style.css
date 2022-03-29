@@ -259,18 +259,18 @@ h2::before {
 }
 .item_card__favorite {
   position: absolute;
-  top: 18px;
-  right: 17px;
-  width: 21px;
-  height: 19px;
-  background: url(/img/main/icons/heart.svg) 0 0/100% 100% no-repeat;
+  top: 8px;
+  right: 7px;
+  width: 40px;
+  height: 40px;
+  background: url(/img/main/icons/heart.svg) center/21px 19px no-repeat;
   z-index: 2
 }
 .item_card__favorite:hover {
-  background: url(/img/main/icons/heart_hov.svg) 0 0/100% 100% no-repeat
+  background: url(/img/main/icons/heart_hov.svg) center/21px 19px no-repeat
 }
 .item_card__favorite.added_to_favorite {
-  background: url(/img/main/icons/heart_active.svg) 0 0/100% 100% no-repeat
+  background: url(/img/main/icons/heart_active.svg) center/21px 19px no-repeat
 }
 .item_card__discount {
   position: absolute;
@@ -2543,8 +2543,8 @@ h2::before {
     height: 20px
   }
   .item_card__favorite {
-    top: 10px;
-    right: 10px
+    top: 0;
+    right: 0
   }
   .item_card__discount {
     bottom: 10px;
