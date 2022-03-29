@@ -1406,9 +1406,84 @@ h2::before {
   width: 100%;
   height: 100%
 }
-.main_map__map ymaps {
+.SumoSelect {
+  width: 100%;
+  margin: 0 0 13px 0;
+  position: relative
+}
+.SumoSelect .CaptionCont,
+.SumoSelect__toggle {
+  height: 55px;
+  font-size: 18px;
+  line-height: 25px;
+  color: #545b6a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: .3125rem;
+  cursor: pointer;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
   max-width: 100%;
-  max-height: 100%
+  padding: 0 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+.SumoSelect .CaptionCont span,
+.SumoSelect__toggle span {
+  padding-right: 10px;
+  position: absolute
+}
+.SumoSelect .CaptionCont label,
+.SumoSelect__toggle label {
+  width: 13px;
+  right: 10px
+}
+.SumoSelect .CaptionCont label i,
+.SumoSelect__toggle label i {
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  background: url(../img/icons/arrow_down_select.svg) 0 0/100% 100% no-repeat;
+  width: 13px;
+  height: 8px
+}
+.SumoSelect .optWrapper {
+  display: none;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  border: 1px solid #ccc;
+  max-height: 326px;
+  overflow-y: auto;
+  border-radius: .3125rem;
+  z-index: 2;
+  background-color: #fff
+}
+.SumoSelect .opt {
+  font-size: 18px;
+  line-height: 150%;
+  color: #545b6a
+}
+.SumoSelect > .optWrapper > .options li.opt {
+  padding: 5px 0 5px 14px;
+  border: none
+}
+.SumoSelect.open .CaptionCont label i {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
+.SumoSelect.open .optWrapper {
+  top: 55px
 }
 .footer {
   background: #000
@@ -1708,6 +1783,12 @@ h2::before {
   }
   .main_slider__slide_btn {
     margin-top: 20px
+  }
+}
+@media (max-width:1220px) {
+  .SumoSelect {
+    margin: 0 0 0 17px;
+    width: calc(50% - 8.5px)
   }
 }
 @media (max-width:1199px) {
@@ -2112,6 +2193,9 @@ h2::before {
   .main_news__item_date {
     font-size: 1.4rem
   }
+  .main_map__map_wr {
+    padding-top: 65%
+  }
   .footer__content {
     padding: 30px 0
   }
@@ -2351,6 +2435,11 @@ h2::before {
     display: block;
     overflow-x: auto;
     max-width: calc(100vw - 40px)
+  }
+}
+@media (mobile) {
+  .main_map__map_wr {
+    padding-top: 100%
   }
 }
 .webp .main_catalog__item::after {
