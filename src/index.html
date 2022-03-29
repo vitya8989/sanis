@@ -13,6 +13,7 @@
 
 <body>
 	<div class="wrapper">
+		@@include('components/preloader/preloader.html')
 		@@include('components/header/header.html')
 		<main class="main">
 			@@include('components/main_slider/main_slider.html')
@@ -27,8 +28,8 @@
 			@@include('components/main_catalog/main_catalog.html')
 			@@include('components/main_map/main_map.html')
 			@@include('components/main_news/main_news.html')
-			@@include('components/footer/footer.html')
 		</main>
+		@@include('components/footer/footer.html')
 	</div>
 
 	<script src="js/jquery-3.6.0.min.js"></script>

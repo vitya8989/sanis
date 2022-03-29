@@ -74,9 +74,10 @@ window.addEventListener('resize', () => {
         document.querySelector('.header__bottom_content').insertBefore(headerCounts, document.querySelector('.header__icons_search'));
     }
 });;
-new Swiper('.main_slider', {
+let mainSlider = new Swiper('.main_slider', {
     speed: 1000,
     slidesPerView: 1,
+    autoHeight: true,
     navigation: {
         nextEl: '.main_slider__btn-next',
         prevEl: '.main_slider__btn-prev'
@@ -88,7 +89,8 @@ new Swiper('.main_slider', {
     autoplay: {
         delay: 6850,
     },
-});;
+});
+;
 // Кнопка "Показать всех"
 
 let partnersBtn = document.querySelector('.partners__btn');
@@ -129,7 +131,7 @@ for (let i = 0; i < aboutDatesPoints.length; i++) {
         let blackLineWidth = (100 / aboutDatesPoints.length) * i + 8;
         let pointsWidth = i * 7;
         if (i === aboutDatesPoints.length - 1) {
-            aboutDatesBlackLine.style.width = `calc(100% - 40px)`;
+            aboutDatesBlackLine.style.width = `calc(100% - 45px)`;
         } else {
             aboutDatesBlackLine.style.width = `calc(${blackLineWidth}% + ${pointsWidth}px - 20px)`;
         }
@@ -146,7 +148,7 @@ aboutSlider.on('slideNextTransitionStart', function () {
     let blackLineWidth = (100 / aboutDatesPoints.length) * aboutSlider.activeIndex + 8;
     let pointsWidth = aboutSlider.activeIndex * 7;
     if (aboutSlider.activeIndex === aboutDatesPoints.length - 1) {
-        aboutDatesBlackLine.style.width = `calc(100% - 40px)`;
+        aboutDatesBlackLine.style.width = `calc(100% - 45px)`;
     } else {
         aboutDatesBlackLine.style.width = `calc(${blackLineWidth}% + ${pointsWidth}px - 20px)`;
     }
@@ -162,7 +164,7 @@ aboutSlider.on('slidePrevTransitionStart', function () {
     let blackLineWidth = (100 / aboutDatesPoints.length) * aboutSlider.activeIndex + 8;
     let pointsWidth = aboutSlider.activeIndex * 7;
     if (aboutSlider.activeIndex === aboutDatesPoints.length - 1) {
-        aboutDatesBlackLine.style.width = `calc(100% - 40px)`;
+        aboutDatesBlackLine.style.width = `calc(100% - 45px)`;
     } else {
         aboutDatesBlackLine.style.width = `calc(${blackLineWidth}% + ${pointsWidth}px - 20px)`;
     }
@@ -359,3 +361,19 @@ window.addEventListener('resize', () => {
         }
     }
 });;
+let itemCardFavorite = document.querySelectorAll('.item_card__favorite');
+
+for (let i = 0; i < itemCardFavorite.length; i++) {
+    itemCardFavorite[i].onclick = () => {
+        itemCardFavorite[i].classList.toggle('added_to_favorite');
+    }
+};
+
+let preloader = document.querySelector('.preloader');
+
+setTimeout(() => {
+    preloader.classList.add('this--hidden');
+}, 1500);;
+
+// карточка товара каталога
+

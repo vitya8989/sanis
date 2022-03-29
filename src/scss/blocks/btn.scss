@@ -9,46 +9,23 @@
   line-height: 1.75;
   text-transform: uppercase;
   position: relative;
-  border-radius: 5px;
+  border-radius: 30px;
   overflow: hidden;
   border: 2px solid #F9C859;
   color: #000000;
   transition: 0.3s;
   background: #F9C859;
-  span {
-    position: relative;
-    z-index: 1;
-  }
-  &::before {
-    transition: 0.3s;
-    content: '';
-    position: absolute;
-    width: 100%;
-    background: #F9C859;
-    z-index: 0;
-    opacity: 1;
-    height: 100%;
-  }
+
   &:hover {
-    background: transparent;
-    &::before {
-      height: 0;
-      opacity: 0;
-    }
+    background: #D59A14;
+    color: #ffffff;
   }
 
-  &.this--transparent {
-    background: transparent;
-    &::before {
-      height: 0;
-      opacity: 0;
-    }
+  &.this--wh {
+    background: #ffffff;
     &:hover {
-      background: #F9C859;
-      &::before {
-        height: 100%;
-        opacity: 1;
-      }
+      background: #D59A14;
+      color: #ffffff;
     }
   }
 
@@ -57,5 +34,6 @@
     height: 30px;
     font-size: 1.4rem;
     line-height: 1.4;
+    border-radius: 5px;
   }
 }

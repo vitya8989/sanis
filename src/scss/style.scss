@@ -37,7 +37,7 @@ body {
 	padding-top: 188px;
 	background: #fffbf2;
 	@media ($tablet2) {
-		padding-top: 158px;
+		padding-top: 113.4px;
 	}
 }
 
@@ -66,3 +66,4 @@ body {
 @import "../components/main_news/main_news";
 @import "../components/main_map/main_map";
 @import "../components/footer/footer";
+@import "../components/preloader/preloader";

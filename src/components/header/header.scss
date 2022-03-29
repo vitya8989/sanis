@@ -2,6 +2,7 @@
   position: fixed;
   width: 100%;
   z-index: 10;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 .header__top {
   background: #000000;
@@ -64,7 +65,7 @@
     position: relative;
   }
   @media ($tablet2) {
-    padding: 20px 0;
+    padding: 7.5px 0;
   }
 }
 .header__logo_text {
@@ -82,7 +83,10 @@
     margin-right: 15px;
   }
   @media ($tablet2) {
-    margin-right: 30px;
+    width: 81px;
+    img {
+      width: 100%;
+    }
   }
 }
 .header__title {
@@ -94,7 +98,6 @@
   }
   @media ($tablet2) {
     display: block;
-    margin-top: 14px;
   }
   @media ($mobile) {
     display: none;
@@ -300,16 +303,24 @@
   &::after {
     bottom: 7.5px;
   }
+  &.burger-open {
+    padding: 6px;
+    border: 1px solid #F6F8FB;
+    border-radius: 2px;
+    background: #ffffff;
+  }
   &.burger-open span {
     opacity: 0;
   }
   &.burger-open::before {
     transform: rotate(45deg);
     top: 14px;
+    left: 4px;
   }
   &.burger-open::after {
     transform: rotate(-45deg);
-    bottom: 17px;
+    bottom: 15px;
+    left: 4px;
   }
 }
 
@@ -322,10 +333,10 @@
     left: 0;
     top: 40px;
     width: 100%;
-    background: url("/img/main/main_logo.png") 20px 20px / 110px 80px no-repeat ,#ffffff;
+    background: url("/img/main/main_logo.png") 20px 7.5px / 81px 60px no-repeat ,#ffffff;
     visibility: hidden;
     opacity: 1;
-    padding: 120px 20px 0;
+    padding: 85px 20px 0;
     transition: 0.3s;
     transform: translateX(120%);
     &.menu-open {
@@ -436,7 +447,9 @@
   color: #000000;
   transition: 0.3s;
   &:hover {
-    color: #F9C859;
+    @media ($tablet2Max) {
+      color: #F9C859;
+    }
   }
 }
 

@@ -27,8 +27,15 @@
   }
 
   &:hover {
-    .main_news__item_text {
-      color: #A27207;
+    @media ($tablet2Max) {
+      .main_news__item_text {
+        color: #A27207;
+      }
+      .main_news__item_img{
+        img {
+          transform: scale(1.04);
+        }
+      }
     }
   }
 
@@ -62,8 +69,10 @@
         }
       }
       &:hover {
-        .main_news__item_text {
-          color: #F9C859;
+        @media ($tablet2Max) {
+          .main_news__item_text {
+            color: #F9C859;
+          }
         }
       }
     }
@@ -92,6 +101,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s;
   }
 }
 

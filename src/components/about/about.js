@@ -29,7 +29,7 @@ for (let i = 0; i < aboutDatesPoints.length; i++) {
         let blackLineWidth = (100 / aboutDatesPoints.length) * i + 8;
         let pointsWidth = i * 7;
         if (i === aboutDatesPoints.length - 1) {
-            aboutDatesBlackLine.style.width = `calc(100% - 40px)`;
+            aboutDatesBlackLine.style.width = `calc(100% - 45px)`;
         } else {
             aboutDatesBlackLine.style.width = `calc(${blackLineWidth}% + ${pointsWidth}px - 20px)`;
         }
@@ -46,7 +46,7 @@ aboutSlider.on('slideNextTransitionStart', function () {
     let blackLineWidth = (100 / aboutDatesPoints.length) * aboutSlider.activeIndex + 8;
     let pointsWidth = aboutSlider.activeIndex * 7;
     if (aboutSlider.activeIndex === aboutDatesPoints.length - 1) {
-        aboutDatesBlackLine.style.width = `calc(100% - 40px)`;
+        aboutDatesBlackLine.style.width = `calc(100% - 45px)`;
     } else {
         aboutDatesBlackLine.style.width = `calc(${blackLineWidth}% + ${pointsWidth}px - 20px)`;
     }
@@ -62,7 +62,7 @@ aboutSlider.on('slidePrevTransitionStart', function () {
     let blackLineWidth = (100 / aboutDatesPoints.length) * aboutSlider.activeIndex + 8;
     let pointsWidth = aboutSlider.activeIndex * 7;
     if (aboutSlider.activeIndex === aboutDatesPoints.length - 1) {
-        aboutDatesBlackLine.style.width = `calc(100% - 40px)`;
+        aboutDatesBlackLine.style.width = `calc(100% - 45px)`;
     } else {
         aboutDatesBlackLine.style.width = `calc(${blackLineWidth}% + ${pointsWidth}px - 20px)`;
     }

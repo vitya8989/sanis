@@ -27,9 +27,9 @@
 }
 
 .main_map__map {
-  height: 600px;
+  height: 540px;
   @media ($tablet2) {
-    height: 463px;
+    height: 350px;
   }
 }
 
@@ -189,13 +189,12 @@
 .main_map__list_addresses {
   list-style-type: none;
   overflow-y: auto;
-  max-height: 375px;
+  max-height: 315px;
   padding-right: 19px;
   @media ($tablet2) {
     overflow-y: hidden;
     max-height: none;
-    text-align: center;
-    max-width: 500px;
+    max-width: 335px;
     margin: 0 auto;
     padding-right: 0;
   }
@@ -302,8 +301,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    max-width: 500px;
+    padding: 0 10px;
+    max-width: 400px;
     margin: 0 auto;
   }
 }
