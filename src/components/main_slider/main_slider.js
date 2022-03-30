@@ -14,4 +14,4 @@ let mainSlider = new Swiper('.main_slider', {
         delay: 6850,
     },
 });
-setTimeout(() => { mainSlider.updateAutoHeight() }, 250);
+setTimeout(() => { mainSlider.updateAutoHeight() }, 350);
