@@ -77,7 +77,7 @@ window.addEventListener('resize', () => {
 let mainSlider = new Swiper('.main_slider', {
     speed: 700,
     slidesPerView: 1,
-    autoHeight: true,
+   // autoHeight: true,
     navigation: {
         nextEl: '.main_slider__btn-next',
         prevEl: '.main_slider__btn-prev'
@@ -122,6 +122,9 @@ let aboutSlider = new Swiper('.about__slider', {
 
 let aboutDatesPoints = document.querySelectorAll('.about__dates_point');
 let aboutDatesBlackLine = document.querySelector('.about__dates_black_line');
+let aboutDates = document.querySelector('.about__dates');
+let aboutDatesLine = document.querySelector('.about__dates_line');
+
 
 for (let i = 0; i < aboutDatesPoints.length; i++) {
     aboutDatesPoints[i].onclick = () => {
@@ -141,13 +144,16 @@ for (let i = 0; i < aboutDatesPoints.length; i++) {
         }
     }
 }
-
+console.log(aboutDatesLine.offsetWidth);
 aboutSlider.on('slideNextTransitionStart', function () {
     for (let k = 0; k < aboutDatesPoints.length; k++) {
         aboutDatesPoints[k].classList.remove('active');
     }
     for (let j = 0; j <= aboutSlider.activeIndex; j++) {
         aboutDatesPoints[j].classList.add('active');
+    }
+    if (aboutSlider.activeIndex > 2) {
+        aboutDates.scrollLeft += aboutDatesLine.offsetWidth / 9;
     }
     let blackLineWidth = (100 / aboutDatesPoints.length) * aboutSlider.activeIndex + 8;
     let pointsWidth = aboutSlider.activeIndex * 7;
@@ -164,6 +170,9 @@ aboutSlider.on('slidePrevTransitionStart', function () {
     }
     for (let j = 0; j <= aboutSlider.activeIndex; j++) {
         aboutDatesPoints[j].classList.add('active');
+    }
+    if (aboutSlider.activeIndex < 7) {
+        aboutDates.scrollLeft -= aboutDatesLine.offsetWidth / 9;
     }
     let blackLineWidth = (100 / aboutDatesPoints.length) * aboutSlider.activeIndex + 8;
     let pointsWidth = aboutSlider.activeIndex * 7;

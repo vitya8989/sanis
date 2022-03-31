@@ -33,7 +33,7 @@ body {
 	margin: 0 auto;
 	padding: 0 20px;
 }
-.main {
+main {
 	padding-top: 188px;
 	background: #fffbf2;
 	@media ($tablet2) {
@@ -53,17 +53,22 @@ body {
 @import "./blocks/item_cards";
 
 @import "../components/header/header";
-@import "../components/main_slider/main_slider";
-@import "../components/partners/partners";
-@import "../components/three_steps/three_steps";
-@import "../components/about/about";
-@import "../components/counts/counts";
-@import "../components/benefits/benefits";
-@import "../components/main_video/main_video";
-@import "../components/novelties/novelties";
-@import "../components/banner/banner";
-@import "../components/main_catalog/main_catalog";
-@import "../components/main_news/main_news";
-@import "../components/main_map/main_map";
 @import "../components/footer/footer";
 @import "../components/preloader/preloader";
+
+@import "../components/main/main_slider/main_slider";
+@import "../components/main/main_partners/main_partners";
+@import "../components/main/main_three_steps/main_three_steps";
+@import "../components/main/main_about/main_about";
+@import "../components/main/main_counts/main_counts";
+@import "../components/main/main_benefits/main_benefits";
+@import "../components/main/main_video/main_video";
+@import "../components/main/main_novelties/main_novelties";
+@import "../components/main/main_banner/main_banner";
+@import "../components/main/main_catalog/main_catalog";
+@import "../components/main/main_news/main_news";
+@import "../components/main/main_map/main_map";
+
+@import "../components/catalog/catalog_content/catalog_content";
+@import "../components/catalog/catalog_filter/catalog_filter";
+@import "../components/catalog/catalog_body/catalog_body";
