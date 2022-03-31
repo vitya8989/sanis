@@ -392,7 +392,6 @@ input[type="checkbox"]:checked + .filter__checkbox_label  {
     transform: translateX(-50%);
     opacity: 0;
     visibility: hidden;
-    transition: 0.3s;
     &.show {
       opacity: 1;
       visibility: visible;

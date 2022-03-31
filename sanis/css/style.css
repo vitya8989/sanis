@@ -3218,10 +3218,7 @@ input[type=checkbox]:checked + .filter__checkbox_label::before {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     opacity: 0;
-    visibility: hidden;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s
+    visibility: hidden
   }
   .filter__btns_wr.show {
     opacity: 1;
