@@ -29,6 +29,13 @@
     }
   }
 
+  &.this--disabled {
+    background: #D1D1D1;
+    color: #F6F8FB;
+    pointer-events: none;
+    border: 2px solid #D1D1D1;
+  }
+
   &.this--small {
     width: 150px;
     height: 30px;
@@ -39,5 +46,9 @@
 
   &.this--small_rad {
     border-radius: 5px;
+  }
+
+  &.this--width_full {
+    width: 100%;
   }
 }

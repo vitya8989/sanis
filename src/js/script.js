@@ -7,8 +7,6 @@
 @@include('../components/main/main_map/main_map.js');
 @@include('../components/footer/footer.js');
 @@include('./item_cards.js');
-
 @@include('../components/preloader/preloader.js');
 
-// карточка товара каталога
 

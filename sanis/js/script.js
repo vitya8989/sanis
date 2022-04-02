@@ -144,7 +144,7 @@ for (let i = 0; i < aboutDatesPoints.length; i++) {
         }
     }
 }
-console.log(aboutDatesLine.offsetWidth);
+
 aboutSlider.on('slideNextTransitionStart', function () {
     for (let k = 0; k < aboutDatesPoints.length; k++) {
         aboutDatesPoints[k].classList.remove('active');
@@ -381,12 +381,10 @@ for (let i = 0; i < itemCardFavorite.length; i++) {
         itemCardFavorite[i].classList.toggle('added_to_favorite');
     }
 };
-
 let preloader = document.querySelector('.preloader');
 
 setTimeout(() => {
     preloader.classList.add('this--hidden');
-}, 1500);;
+}, 100);;
 
-// карточка товара каталога
 

@@ -2,7 +2,7 @@ let preloader = document.querySelector('.preloader');
 
 setTimeout(() => {
     preloader.classList.add('this--hidden');
-}, 1500);;
+}, 100);;
 // Появление формы поиска
 
 let headerSearchBtn = document.querySelector('.header__search_btn');

@@ -210,7 +210,7 @@
       grid-area: s8;
       .main_catalog__item_img {
         img {
-          transform: scale(0.65) translate(80px, -25px);
+          transform: scale(0.55) translate(115px, -65px);
         }
       }
     }
@@ -266,6 +266,9 @@
   left: 20px;
   bottom: 20px;
   z-index: 2;
+  display: flex;
+  flex-wrap: wrap-reverse;
+
   a {
     display: inline-block;
     background: #000000;
@@ -277,6 +280,7 @@
     margin-right: 5px;
     margin-top: 5px;
     transition: 0.3s;
+    white-space: nowrap;
     &:hover {
       background: #FFFFFF;
       color: #000000;

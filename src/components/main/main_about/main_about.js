@@ -38,7 +38,7 @@ for (let i = 0; i < aboutDatesPoints.length; i++) {
         }
     }
 }
-console.log(aboutDatesLine.offsetWidth);
+
 aboutSlider.on('slideNextTransitionStart', function () {
     for (let k = 0; k < aboutDatesPoints.length; k++) {
         aboutDatesPoints[k].classList.remove('active');

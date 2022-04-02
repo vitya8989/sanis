@@ -2,13 +2,9 @@
   flex: 1 1 auto;
 }
 .catalog__title {
-  font-weight: 400;
-  font-size: 3.4rem;
-  line-height: 1.18;
   text-align: center;
   @media ($mobile) {
     text-align: left;
-    font-size: 2.8rem;
   }
 }
 .catalog__sort_counts {

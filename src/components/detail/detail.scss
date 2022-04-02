@@ -1,0 +1,44 @@
+.detail {
+  overflow: hidden;
+}
+
+.detail__top {
+  padding: 40px 0;
+  @media ($tablet2) {
+    padding: 20px 0 30px;
+  }
+  &.this--pb_0 {
+    padding-bottom: 0;
+  }
+}
+.detail__row {
+  display: flex;
+
+  @media ($tablet2) {
+    flex-direction: column;
+    &.detail__bottom {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.detail__left {
+  width: 46%;
+  min-width: 0;
+  @media ($tablet2) {
+    width: 100%;
+  }
+}
+.detail__right {
+  width: calc(54% - 50px);
+  margin-left: 50px;
+  @media ($desktopBig) {
+    margin-left: 20px;
+    width: calc(54% - 20px);
+  }
+  @media ($tablet2) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+

@@ -26,8 +26,10 @@
   transition: 0.2s;
   background: url("/img/main/icons/arrow_slider.svg") center/ 14px 14px no-repeat;
   &:hover {
-    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
-    background: url("/img/main/icons/arrow_slider_hov.svg") center/ 14px 14px no-repeat, #ffffff;
+    @media ($tablet2Max) {
+      box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+      background: url("/img/main/icons/arrow_slider_hov.svg") center/ 14px 14px no-repeat, #ffffff;
+    }
   }
 
   @media ($desktopSuperBig) {

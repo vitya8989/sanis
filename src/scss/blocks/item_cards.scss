@@ -22,6 +22,24 @@
       margin-bottom: 20px;
     }
   }
+  &.this--two {
+    margin-left: -15px;
+    margin-bottom: 0;
+    .item_card {
+      margin-left: 15px;
+      margin-bottom: 0;
+      width: calc(50% - 15px);
+
+      //@media ($desktop) {
+      //  width: calc(33.33333% - 20px);
+      //}
+      //@media ($mobile) {
+      //  width: calc(50% - 15px);
+      //  margin-left: 15px;
+      //  margin-bottom: 20px;
+      //}
+    }
+  }
 }
 
 .item_card {
@@ -77,6 +95,15 @@
   @media ($tablet3) {
     top: 10px;
     left: 10px;
+  }
+
+  &.this--detail {
+    left: 25px;
+    top: 25px;
+    @media ($tablet3) {
+      top: 20px;
+      left: 20px;
+    }
   }
 }
 .item_card__new,
