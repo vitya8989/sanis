@@ -60,15 +60,7 @@ if (window.innerWidth < 1500) {
     detailSizesItems.classList.add('this--limited');
     detailSizesMoreBtn.classList.remove('this--hidden');
 }
-window.addEventListener('resize',  () => {
-    if (window.innerWidth < 1500) {
-        detailSizesItems.classList.add('this--limited');
-        detailSizesMoreBtn.classList.remove('this--hidden');
-    } else {
-        detailSizesItems.classList.remove('this--limited');
-        detailSizesMoreBtn.classList.add('this--hidden');
-    }
-});
+
 
 detailSizesMoreBtn.onclick = () => {
     detailSizesItems.classList.remove('this--limited');

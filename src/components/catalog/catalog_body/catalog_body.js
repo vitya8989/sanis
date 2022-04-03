@@ -3,6 +3,7 @@
 let catalogSortBtn = document.querySelector('.catalog__sort_btn ');
 let catalogSortRadioGroup = document.querySelector('.catalog__sort_radio_group');
 let catalogSortRadioLabel = document.querySelectorAll('.catalog__sort_radio_label');
+let catalogSortBtnArrow = document.querySelector('.catalog__sort_btn_arrow');
 
 for (let label of catalogSortRadioLabel) {
     label.onclick = () => {
@@ -12,6 +13,7 @@ for (let label of catalogSortRadioLabel) {
 
 catalogSortBtn.onclick = () => {
     catalogSortRadioGroup.classList.toggle('this--hidden');
+    catalogSortBtnArrow.classList.toggle('rotate');
 }
 
 // радиокнопки сортировки

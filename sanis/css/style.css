@@ -2163,6 +2163,11 @@ input[type=checkbox]:checked + .filter__checkbox_label::before {
   -o-transition: .3s;
   transition: .3s
 }
+.catalog__sort_btn_arrow.rotate {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
 .catalog__sort_btn_arrow svg {
   position: absolute;
   top: 0;

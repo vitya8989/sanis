@@ -9,7 +9,9 @@ $('.filter__item_title_wr').each(function() {
 });
 
 $('.filter__item_title_wr').click(function() {
-    $(this).next().slideToggle().addClass("opened");
+    $(this).next().slideToggle().toggleClass("opened");
+    $(this).find('.filter__item_arrow').toggleClass("rotate");
+    filterFloatButton.classList.add('this--hidden');
 });
 
 // высплывабщая кнопка фильтра и нижние кнопки
