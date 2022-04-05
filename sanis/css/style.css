@@ -2290,7 +2290,8 @@ input[type=checkbox]:checked + .filter__checkbox_label::before {
   line-height: 1.4;
   -webkit-transition: .3s;
   -o-transition: .3s;
-  transition: .3s
+  transition: .3s;
+  color: #000
 }
 .catalog__category.active {
   border: 1px solid #f9c859;
