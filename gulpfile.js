@@ -13,7 +13,7 @@ let path = {
 		video: project_folder + "/video/",
 	},
 	src: {
-		html: [source_folder + "/**/*.html", "!" + source_folder + "/_*.html", "!" + source_folder + "/components/*.html"],
+		html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
 		css: [source_folder + "/scss/style.scss", source_folder + "/scss/*.css"],
 		js: [source_folder + "/js/*.js", "!" + source_folder + "/js/_*.js"],
 		img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",

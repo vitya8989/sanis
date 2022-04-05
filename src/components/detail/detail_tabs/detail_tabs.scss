@@ -87,7 +87,9 @@ width: 639px;
   &.active_tab {
     display: block;
   }
-
+  h4 {
+    margin-bottom: 5px;
+  }
   p {
     margin-bottom: 20px;
     @media ($tablet2) {
@@ -96,9 +98,7 @@ width: 639px;
   }
 
 }
-.detail_tabs__body_title {
-  margin-bottom: 5px;
-}
+
 .detail_tabs__body_row {
   display: flex;
   flex-wrap: wrap;

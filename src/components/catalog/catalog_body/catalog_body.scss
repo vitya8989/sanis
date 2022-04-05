@@ -274,6 +274,16 @@
 }
 .catalog__pagination_item {
   margin-left: 7px;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    color: #000000;
+    font-family: Michroma;
+    font-weight: 400;
+  }
 }
 .catalog__pagination_link {
   display: flex;

@@ -12,6 +12,7 @@ let mainSlider = new Swiper('.main_slider', {
     },
     autoplay: {
         delay: 6850,
+        disableOnInteraction: false,
     },
 });
 

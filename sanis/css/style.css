@@ -2335,6 +2335,22 @@ input[type=checkbox]:checked + .filter__checkbox_label::before {
 .catalog__pagination_item {
   margin-left: 7px
 }
+.catalog__pagination_item span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  color: #000;
+  font-family: Michroma;
+  font-weight: 400
+}
 .catalog__pagination_link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2747,11 +2763,11 @@ input[type=checkbox]:checked + .filter__checkbox_label::before {
 .detail_tabs__body.active_tab {
   display: block
 }
+.detail_tabs__body h4 {
+  margin-bottom: 5px
+}
 .detail_tabs__body p {
   margin-bottom: 20px
-}
-.detail_tabs__body_title {
-  margin-bottom: 5px
 }
 .detail_tabs__body_row {
   display: -webkit-box;
