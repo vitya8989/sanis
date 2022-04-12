@@ -29,15 +29,40 @@
       margin-left: 15px;
       margin-bottom: 0;
       width: calc(50% - 15px);
-
-      //@media ($desktop) {
-      //  width: calc(33.33333% - 20px);
-      //}
-      //@media ($mobile) {
-      //  width: calc(50% - 15px);
-      //  margin-left: 15px;
-      //  margin-bottom: 20px;
-      //}
+    }
+  }
+  &.this--five {
+    margin-left: -30px;
+    margin-bottom: -40px;
+    @media ($desktop) {
+      margin-left: -20px;
+      margin-bottom: -35px;
+    }
+    @media ($tablet2) {
+      margin-bottom: -30px;
+    }
+    @media ($mobile) {
+      margin-left: -15px;
+      margin-bottom: -20px;
+    }
+    .item_card {
+      margin-left: 30px;
+      margin-bottom: 40px;
+      width: calc(20% - 30px);
+      @media ($desktop) {
+        margin-left: 20px;
+        margin-bottom: 35px;
+        width: calc(25% - 20px);
+      }
+      @media ($tablet2) {
+        width: calc(33.333% - 20px);
+        margin-bottom: 30px;
+      }
+      @media ($mobile) {
+        width: calc(50% - 15px);
+        margin-left: 15px;
+        margin-bottom: 20px;
+      }
     }
   }
 }

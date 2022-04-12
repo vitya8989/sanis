@@ -99,7 +99,7 @@ html {
 body {
   font-size: 1.6rem;
   line-height: 1.5;
-  font-family: Nunito;
+  font-family: Nunito,sans-serif;
   font-weight: 300;
   color: #000
 }
@@ -145,6 +145,7 @@ main {
   background: #f9c859
 }
 .btn:hover {
+  border: 2px solid #d59a14;
   background: #d59a14;
   color: #fff
 }
@@ -175,7 +176,7 @@ main {
   width: 100%
 }
 h1 {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 3.4rem;
   line-height: 1.18
 }
@@ -227,6 +228,15 @@ h4 {
   margin-left: 15px;
   margin-bottom: 0;
   width: calc(50% - 15px)
+}
+.item__cards.this--five {
+  margin-left: -30px;
+  margin-bottom: -40px
+}
+.item__cards.this--five .item_card {
+  margin-left: 30px;
+  margin-bottom: 40px;
+  width: calc(20% - 30px)
 }
 .item_card {
   position: relative
@@ -3005,6 +3015,54 @@ input[type=checkbox]:checked + .filter__checkbox_label::before {
   -ms-transform: rotate(90deg);
   transform: rotate(90deg)
 }
+.collection_card__title {
+  text-align: center;
+  text-transform: uppercase
+}
+.collection_card__subtitle {
+  text-align: center;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.3333;
+  text-transform: uppercase;
+  margin-top: 30px
+}
+.collection_card__text {
+  text-align: center;
+  max-width: 1007px;
+  margin: 15px auto 40px
+}
+.search_result__form {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.search_result__form_input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  height: 60px;
+  background: #fff;
+  border: 2px solid #f9c859;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.6rem
+}
+.search_result__form_btn {
+  width: 34px;
+  height: 34px;
+  background: url(/img/main/icons/search.svg) center/cover no-repeat;
+  margin-left: 23px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  cursor: pointer
+}
 @media (min-width:960px) {
   .item_card:hover .item_card__text {
     color: #a27207
@@ -3414,6 +3472,15 @@ input[type=checkbox]:checked + .filter__checkbox_label::before {
   .item__cards .item_card {
     width: calc(33.33333% - 20px)
   }
+  .item__cards.this--five {
+    margin-left: -20px;
+    margin-bottom: -35px
+  }
+  .item__cards.this--five .item_card {
+    margin-left: 20px;
+    margin-bottom: 35px;
+    width: calc(25% - 20px)
+  }
   .header__bottom_content {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -3577,6 +3644,13 @@ input[type=checkbox]:checked + .filter__checkbox_label::before {
   }
   h2 {
     font-size: 2.4rem
+  }
+  .item__cards.this--five {
+    margin-bottom: -30px
+  }
+  .item__cards.this--five .item_card {
+    width: calc(33.333% - 20px);
+    margin-bottom: 30px
   }
   .header__top_items {
     display: none
@@ -4336,6 +4410,15 @@ input[type=checkbox]:checked + .filter__checkbox_label::before {
     margin-left: 15px;
     margin-bottom: 20px
   }
+  .item__cards.this--five {
+    margin-left: -15px;
+    margin-bottom: -20px
+  }
+  .item__cards.this--five .item_card {
+    width: calc(50% - 15px);
+    margin-left: 15px;
+    margin-bottom: 20px
+  }
   .header__title {
     display: none
   }
@@ -4449,6 +4532,10 @@ input[type=checkbox]:checked + .filter__checkbox_label::before {
     top: -38px;
     right: 0
   }
+  .catalog__sort_counts.this--search_result .catalog__counts {
+    right: auto;
+    left: 0
+  }
   .detail_big_slider {
     margin: 0 -20px;
     max-width: none
@@ -4481,6 +4568,27 @@ input[type=checkbox]:checked + .filter__checkbox_label::before {
     margin-left: 0;
     width: 100%;
     margin-bottom: 0
+  }
+  .collection_card__title {
+    text-align: left
+  }
+  .collection_card__subtitle {
+    margin-top: 20px;
+    text-align: left
+  }
+  .collection_card__text {
+    margin: 10px 0 20px;
+    text-align: left
+  }
+  .search_result__form {
+    margin-top: 15px;
+    margin-bottom: 48px
+  }
+  .search_result__form_input {
+    height: 40px
+  }
+  .search_result__form_btn {
+    margin-left: 10px
   }
 }
 @media (max-width:550px) {

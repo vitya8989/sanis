@@ -176,6 +176,11 @@
     position: absolute;
     top: -38px;
     right: 0;
+
+    .catalog__sort_counts.this--search_result & {
+      right: auto;
+      left: 0;
+    }
   }
 }
 

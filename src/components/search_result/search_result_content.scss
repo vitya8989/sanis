@@ -1,0 +1,36 @@
+.search_result__form {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  @media ($mobile) {
+    margin-top: 15px;
+    margin-bottom: 48px;
+  }
+}
+.search_result__form_input {
+  flex: 1 1 auto;
+  height: 60px;
+  background: #FFFFFF;
+  border: 2px solid #F9C859;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.6rem;
+  @media ($mobile) {
+    height: 40px;
+  }
+}
+.search_result__form_btn {
+  width: 34px;
+  height: 34px;
+  background: url("/img/main/icons/search.svg") center/cover no-repeat;
+  margin-left: 23px;
+  flex: 0 0 auto;
+  cursor: pointer;
+
+  @media ($mobile) {
+    margin-left: 10px;
+  }
+}
+
+
