@@ -78,6 +78,7 @@
   }
 }
 .header__logo {
+  display: block;
   margin-right: 30px;
   @media ($desktopBig) {
     margin-right: 15px;
