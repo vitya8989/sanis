@@ -1,7 +1,6 @@
-let mainSlider = new Swiper('.main_slider', {
+new Swiper('.main_slider', {
     speed: 700,
     slidesPerView: 1,
-   // autoHeight: true,
     navigation: {
         nextEl: '.main_slider__btn-next',
         prevEl: '.main_slider__btn-prev'
@@ -15,8 +14,3 @@ let mainSlider = new Swiper('.main_slider', {
         disableOnInteraction: false,
     },
 });
-
-setTimeout(() => {
-    mainSlider.updateAutoHeight();
-    mainSlider.update();
-}, 350);
