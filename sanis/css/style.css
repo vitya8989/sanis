@@ -4723,6 +4723,9 @@ input[type=checkbox]:checked + .filter__checkbox_label::before {
   .search_result__form_btn {
     margin-left: 10px
   }
+  .about_page__top_title {
+    text-align: left
+  }
   .about_page__top_text {
     margin: 10px 0 -5px
   }

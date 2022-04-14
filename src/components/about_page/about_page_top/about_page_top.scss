@@ -4,6 +4,9 @@
 }
 .about_page__top_title {
   text-align: center;
+  @media($mobile) {
+    text-align: left;
+  }
 }
 .about_page__top_text {
   margin: 20px 0;
