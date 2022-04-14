@@ -10,6 +10,7 @@
   }
 }
 .certificates_slider__slide {
+  cursor: zoom-in;
   @media ($mobileMiddle) {
     max-width: 300px;
   }

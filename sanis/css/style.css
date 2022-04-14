@@ -3106,6 +3106,10 @@ input[type=checkbox]:checked + .filter__checkbox_label::before {
 .certificates_slider {
   overflow: hidden
 }
+.certificates_slider__slide {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in
+}
 .certificates_slider__slide_img {
   display: block;
   padding-top: 141.2%;
