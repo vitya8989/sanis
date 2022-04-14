@@ -12,17 +12,20 @@ new Swiper('.certificates_slider', {
     },
     breakpoints: {
         500: {
+            slidesPerGroup: 2,
             slidesPerView: 2,
         },
         640: {
+            slidesPerGroup: 3,
             slidesPerView: 3,
             spaceBetween: 15,
         },
         1024: {
+            slidesPerGroup: 4,
             slidesPerView: 4,
         },
         1600: {
-
+            slidesPerGroup: 5,
             slidesPerView: 5,
         }
     }
