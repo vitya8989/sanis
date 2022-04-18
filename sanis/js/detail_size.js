@@ -151,7 +151,7 @@ for (let i = 0; i < detailSizesItem.length; i++) {
     let itemPlus = detailSizesItem[i].querySelector('.detail_sizes__item_plus');
     let itemInput = detailSizesItem[i].querySelector('.detail_sizes__hidden_input');
     let itemOrderedCount = detailSizesItem[i].querySelector('.detail_sizes__item_ordered');
-
+    let disabledBtn = true;
     itemPlus.onclick = (e) => {
         e.preventDefault();
         itemInput.value++;
@@ -162,6 +162,7 @@ for (let i = 0; i < detailSizesItem.length; i++) {
         }
         if (itemInput.value > 0 && detailFormBtn.classList.contains('this--disabled')) {
             detailFormBtn.classList.remove('this--disabled');
+            disabledBtn = false;
         }
     }
     itemMinus.onclick = (e) => {
@@ -173,10 +174,21 @@ for (let i = 0; i < detailSizesItem.length; i++) {
 
         itemValue.textContent = itemInput.value;
         itemOrderedCount.textContent = itemInput.value;
+        disabledBtn = true;
+
+        for (let j = 0; j < detailSizesItem.length; j++) {
+           if (detailSizesItem[j].querySelector('.detail_sizes__hidden_input').value > 0) {
+               disabledBtn = false;
+           }
+        }
+
+        console.log(disabledBtn);
+        if (disabledBtn) {
+            detailFormBtn.classList.add('this--disabled');
+        }
 
         if (itemInput.value == 0) {
             detailSizesItem[i].classList.remove('ordered');
-            detailFormBtn.classList.add('this--disabled');
         }
     }
 }

@@ -1905,7 +1905,8 @@ h4 {
   left: 255px;
   top: 0;
   z-index: 30;
-  overflow: visible
+  overflow: visible;
+  cursor: pointer
 }
 .filter__float_button::before {
   content: '';
@@ -4790,6 +4791,9 @@ input[type=checkbox]:checked + .filter__checkbox_label::before {
   }
   .certificates_slider__slide {
     max-width: 300px
+  }
+  .about_page__certificates {
+    overflow-x: hidden
   }
   .certificates_slider__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
     display: none

@@ -15,6 +15,12 @@
     max-width: 300px;
   }
 }
+.about_page__certificates {
+  @media ($mobileMiddle) {
+    overflow-x: hidden;
+  }
+}
+
 .certificates_slider__slide_img {
   display: block;
   padding-top: 141.2%;
