@@ -58,6 +58,7 @@ main {
 @import "./blocks/btn";
 @import "./blocks/title";
 @import "./blocks/item_cards";
+@import "./blocks/form";
 
 @import "../components/header/header";
 @import "../components/footer/footer";
@@ -95,3 +96,9 @@ main {
 
 @import "../components/about_page/about_page_top/about_page_top";
 @import "../components/about_page/about_page_certificates/about_page_certificates";
+
+@import "../components/feedback_popup/feedback_popup";
+
+@import "../components/news_card/news_card";
+
+@import "../components/page_404/page_404";

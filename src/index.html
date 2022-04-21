@@ -17,7 +17,11 @@
     @@include('components/header/header.html')
     <main class="main">
         @@include('components/main/main_slider/main_slider.html')
-        @@include('components/main/main_partners/main_partners.html')
+        <section class="partners section">
+            <div class="container">
+                @@include('components/main/main_partners/main_partners.html')
+            </div>
+        </section>
         @@include('components/main/main_three_steps/main_three_steps.html')
         <section class="about section">
             <div class="container">
@@ -35,9 +39,13 @@
         @@include('components/main/main_novelties/main_novelties.html')
         @@include('components/main/main_banner/main_banner.html')
         @@include('components/main/main_catalog/main_catalog.html')
+        <section class="main_map">
+            <h2 class="main_map__title">адреса</h2>
         @@include('components/main/main_map/main_map.html')
+        </section>
         @@include('components/main/main_news/main_news.html')
     </main>
+    @@include('components/feedback_popup/feedback_popup.html')
     @@include('components/footer/footer.html')
 </div>
 

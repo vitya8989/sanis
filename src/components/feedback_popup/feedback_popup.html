@@ -1,0 +1,25 @@
+<div class="feedback_popup">
+    <div class="feedback_popup__body">
+        <div class="feedback_popup__close js_feedback_popup_close"></div>
+        <div class="feedback_popup__title popup_title">
+            Оставить заявку на заключение договора
+        </div>
+        <form class="feedback_popup__form feedback_form" action="">
+            <div class="feedback_form__input_wr">
+                <label for="feedback_name" class="feedback_form__label">Имя *</label>
+                <input class="feedback_form__input text_input only_letter_rus" type="text" name="name" id="feedback_name">
+                <div class="feedback_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+            </div>
+            <div class="feedback_form__input_wr">
+                <label for="feedback_tel" class="feedback_form__label">Телефон *</label>
+                <input class="feedback_form__input text_input only_number" type="text" name="name" id="feedback_tel">
+                <div class="feedback_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+            </div>
+            <div class="feedback_form__agreement">
+                Нажимая кнопку, вы принимаете <a href="#">Условия сайта</a><br>
+                и <a href="#">Политику конфиденциальности</a>
+            </div>
+            <input type="submit" class="feedback_form__btn btn">
+        </form>
+    </div>
+</div>

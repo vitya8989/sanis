@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Партнерам</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="wrapper">
+    @@include('components/preloader/preloader.html')
+    @@include('components/header/header.html')
+    <main class="partners_page">
+        <section class="partners section">
+            <div class="container">
+                <h1 class="partners__title_h1">Партнерам</h1>
+                @@include('components/main/main_partners/main_partners.html')
+            </div>
+        </section>
+        <section class="benefits section this--bottom">
+            @@include('components/main/main_benefits/main_benefits.html')
+        </section>
+        @@include('components/main/main_counts/main_counts.html')
+        @@include('components/main/main_three_steps/main_three_steps.html')
+        <div class="about_page__top section">
+            <div class="container">
+                <div class="about_page__top_content">
+                    <h2 class="about_page__top_title">Заголовок</h2>
+                    @@include('components/about_page/about_page_top/about_page_top.html')
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('components/feedback_popup/feedback_popup.html')
+    @@include('components/footer/footer.html')
+</div>
+
+<script src="js/partners.js"></script>
+</body>
+
+</html>

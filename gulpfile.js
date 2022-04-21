@@ -63,7 +63,7 @@ function browserSync(params) {
 function html() {
 	return src(path.src.html)
 		.pipe(fileinclude())
-		.pipe(webphtml())
+		// .pipe(webphtml())
 		.pipe(dest(path.build.html))
 		.pipe(browsersync.stream())
 }
@@ -85,8 +85,8 @@ function css() {
 			})
 		)
 		.pipe(webpcss())
-		.pipe(dest(path.build.css))
-		.pipe(clean_css({ level: { 1: { specialComments: 0 } }, format: 'beautify' }))
+		// .pipe(dest(path.build.css))
+		// .pipe(clean_css({ level: { 1: { specialComments: 0 } }, format: 'beautify' }))
 		//.pipe(
 		//	rename({
 		//		extname: ".min.css"
@@ -114,22 +114,22 @@ function js() {
 
 function images() {
 	return src(path.src.img)
-		.pipe(
-			webp({
-				quality: 70
-			})
-		)
+		// .pipe(
+		// 	webp({
+		// 		quality: 70
+		// 	})
+		// )
 		.pipe(dest(path.build.img))
-		.pipe(src(path.src.img))
-		.pipe(
-			imagemin({
-				progressive: true,
-				svgoPlugins: [{ removeViewBox: false }],
-				interlaced: true,
-				optimizationLevel: 3 //0 to 7
-			})
-		)
-		.pipe(dest(path.build.img))
+		// .pipe(src(path.src.img))
+		// .pipe(
+		// 	imagemin({
+		// 		progressive: true,
+		// 		svgoPlugins: [{ removeViewBox: false }],
+		// 		interlaced: true,
+		// 		optimizationLevel: 3 //0 to 7
+		// 	})
+		// )
+		// .pipe(dest(path.build.img))
 		.pipe(browsersync.stream())
 }
 

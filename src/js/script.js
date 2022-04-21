@@ -8,5 +8,7 @@
 @@include('../components/footer/footer.js');
 @@include('./item_cards.js');
 @@include('../components/preloader/preloader.js');
+@@include('../components/feedback_popup/feedback_popup.js');
+
 
 

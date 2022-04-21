@@ -156,6 +156,7 @@ for (let i = 0; i < checkboxes.length; i++) {
            filterBtnsWr.classList.remove('show');
            filterBody.classList.remove('this--big_pb');
            catalogMobileFilterBtnCount.classList.remove('show');
+           filterFloatButton.classList.add('this--hidden');
        }
         if (activeCheckboxes >= 1) {
             catalogMobileFilterBtnCount.classList.add('show');

@@ -1,9 +1,19 @@
-h1 {
+h1,
+.popup_title {
   font-weight: 600;
   font-size: 3.4rem;
   line-height: 1.18;
   @media ($mobile) {
     font-size: 2.8rem;
+  }
+
+  &.this--center {
+    @media ($mobileMax) {
+      text-align: center;
+    }
+  }
+  &.this--center_all {
+    text-align: center;
   }
 }
 

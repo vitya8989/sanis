@@ -15,6 +15,7 @@
   color: #000000;
   transition: 0.3s;
   background: #F9C859;
+  cursor: pointer;
 
   &:hover {
     border: 2px solid #D59A14;
@@ -24,9 +25,19 @@
 
   &.this--wh {
     background: #ffffff;
+
     &:hover {
-      background: #D59A14;
-      color: #ffffff;
+      @media ($tablet2Max) {
+        background: #D59A14;
+        color: #ffffff;
+        .prev_btn_arrow {
+          background: #ffffff;
+          &::before,
+          &::after {
+            background: #ffffff;
+          }
+        }
+      }
     }
   }
 
@@ -51,5 +62,33 @@
 
   &.this--width_full {
     width: 100%;
+  }
+}
+
+.prev_btn_arrow {
+  width: 22px;
+  height: 2px;
+  position: relative;
+  transition: 0.3s;
+  background: #000000;
+  margin-right: 17px;
+
+  &::before,
+  &::after {
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    content: '';
+    left: -1px;
+    transition: 0.3s;
+    background: #000000;
+  }
+  &::before {
+    top: -3px;
+    transform: rotate(-45deg);
+  }
+  &::after {
+    top: 3px;
+    transform: rotate(45deg);
   }
 }
