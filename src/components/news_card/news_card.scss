@@ -28,6 +28,10 @@
     font-weight: 400;
     line-height: 1.62;
     margin-bottom: 10px;
+    @media ($mobile) {
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
   }
 }
 .news_card__btn {

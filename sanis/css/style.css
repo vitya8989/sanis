@@ -6038,6 +6038,11 @@ input[type="checkbox"]:checked + .filter__checkbox_label::before {
   .feedback_form__btn {
     margin: 20px auto 0;
   }
+
+  .news_card__text p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
 }
 
 @media (max-width: 550px) {
