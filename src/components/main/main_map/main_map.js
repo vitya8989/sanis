@@ -12,10 +12,6 @@ mainMapOffices.onclick = () => {
     mainMapShops.classList.remove('active');
 }
 
-// инициализация селекта карты
-
-$('.select').SumoSelect();
-
 // адреса в списке карты
 
 let mainMapListAddress = document.querySelectorAll('.main_map__list_address');

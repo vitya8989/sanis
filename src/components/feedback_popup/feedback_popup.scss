@@ -23,7 +23,7 @@
     height: 560px;
     background: #ffffff;
     border-radius: 15px;
-    padding: 60px 96px;
+    padding: 60px 94px;
     position: relative;
 
     @media($mobile) {
@@ -38,10 +38,10 @@
 }
 .feedback_popup__close {
     position: absolute;
-    right: 30px;
-    top: 30px;
-    width: 20px;
-    height: 20px;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
 
     &::before,
@@ -52,7 +52,7 @@
         height: 2px;
         background: #B8B8B8;
         top: calc(50% - 1px);
-        left: 0;
+        left: 6px;
     }
     &::before {
         transform: rotate(45deg);
@@ -63,26 +63,6 @@
 }
 .feedback_popup__title {
     text-align: center;
-}
-.feedback_form__input_wr {
-    margin-top: 25px;
-    position: relative;
-}
-.feedback_form__label,
-.feedback_form__input {
-    display: block;
-}
-.feedback_form__label {
-    margin-bottom: 5px;
-
-    &.error-input {
-        color: #A61616;
-    }
-}
-.feedback_form__input_error_message {
-    position: absolute;
-    bottom: -18px;
-    left: 0;
 }
 .feedback_form__agreement {
     margin-top: 20px;

@@ -74,76 +74,11 @@ window.addEventListener('resize', () => {
         document.querySelector('.header__bottom_content').insertBefore(headerCounts, document.querySelector('.header__icons_search'));
     }
 });;
-// Кнопка "Показать всех"
-
-let partnersBtn = document.querySelector('.partners__btn');
-let partnersItems = document.querySelector('.partners__items');
-
-partnersBtn.onclick = () => {
-    partnersItems.classList.remove('this--limited');
-    partnersBtn.classList.add('this--hidden');
-};
-let footerCopyright = document.querySelectorAll('.footer__copyright');
-let footerSocial = document.querySelectorAll('.footer__social');
-let footerContent = document.querySelectorAll('.footer__content');
-let footerMenuSocial = document.querySelectorAll('.footer__menu_social');
-
-if (window.innerWidth < 959) {
-    for (let i = 0; i < footerContent.length; i++) {
-        footerContent[i].append(footerCopyright[i]);
-        footerContent[i].append(footerSocial[i]);
-    }
-}
-
-window.addEventListener('resize', () => {
-    if (window.innerWidth < 959) {
-        for (let i = 0; i < footerContent.length; i++) {
-            footerContent[i].append(footerCopyright[i]);
-            footerContent[i].append(footerSocial[i]);
-        }
-    } else {
-        for (let i = 0; i < footerContent.length; i++) {
-            footerMenuSocial[i].append(footerCopyright[i]);
-            footerMenuSocial[i].append(footerSocial[i]);
-        }
-    }
-});;
 let preloader = document.querySelector('.preloader');
 
 setTimeout(() => {
     preloader.classList.add('this--hidden');
 }, 100);;
-let feedbackPopupOpen = document.querySelectorAll('.js_feedback_popup_open');
-let feedbackPopup = document.querySelector('.feedback_popup');
-let feedbackPopupClose = document.querySelectorAll('.js_feedback_popup_close');
-let feedbackForm = document.querySelector('.feedback_form');
-
-if (feedbackPopupOpen.length > 0) {
-    for (let i = 0; i < feedbackPopupOpen.length; i++) {
-        feedbackPopupOpen[i].onclick = () => {
-            feedbackPopup.classList.add('show');
-        };
-        feedbackPopupClose[i].onclick = () => {
-            feedbackPopup.classList.remove('show');
-            feedbackForm.reset();
-        };
-    }
-    feedbackPopup.onclick = (e) => {
-        if (!e.target.closest('.feedback_popup__body')) {
-            feedbackPopup.classList.remove('show');
-            feedbackForm.reset();
-        }
-    }
-}
-
-let feedbackFormInputs = document.querySelectorAll('.feedback_form__input');
-
-feedbackForm.onsubmit = function (e) {
-    e.preventDefault();
-    validateForm(feedbackFormInputs);
-}
-
-unErrorForm(feedbackFormInputs);;
 let onlyLetterRus = document.querySelectorAll('.only_letter_rus');
 let onlyNumber = document.querySelectorAll('.only_number');
 
@@ -194,3 +129,36 @@ if (textareaWr) {
     });
 }
 ;
+let footerCopyright = document.querySelectorAll('.footer__copyright');
+let footerSocial = document.querySelectorAll('.footer__social');
+let footerContent = document.querySelectorAll('.footer__content');
+let footerMenuSocial = document.querySelectorAll('.footer__menu_social');
+
+if (window.innerWidth < 959) {
+    for (let i = 0; i < footerContent.length; i++) {
+        footerContent[i].append(footerCopyright[i]);
+        footerContent[i].append(footerSocial[i]);
+    }
+}
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth < 959) {
+        for (let i = 0; i < footerContent.length; i++) {
+            footerContent[i].append(footerCopyright[i]);
+            footerContent[i].append(footerSocial[i]);
+        }
+    } else {
+        for (let i = 0; i < footerContent.length; i++) {
+            footerMenuSocial[i].append(footerCopyright[i]);
+            footerMenuSocial[i].append(footerSocial[i]);
+        }
+    }
+});;
+
+let validateInputs = document.querySelectorAll('.js_validate');
+let loginForm = document.querySelector('.login_form');
+loginForm.onsubmit = (e) => {
+    e.preventDefault();
+    validateForm(validateInputs);
+}
+unErrorForm(validateInputs);

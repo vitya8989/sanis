@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/sumoselect.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="wrapper">
+    @@include('components/preloader/preloader.html')
+    @@include('components/header/header.html')
+    <main class="ordering">
+        <div class="section">
+            <div class="container">
+                @@include('components/ordering/ordering_content.html')
+            </div>
+        </div>
+    </main>
+    @@include('components/footer/footer.html')
+</div>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery.sumoselect.min.js"></script>
+<script src="js/ordering.js"></script>
+</body>
+
+</html>

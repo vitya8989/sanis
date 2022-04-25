@@ -27,7 +27,11 @@ body {
 		overflow: hidden;
 	}
 }
-
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
 
 .container {
 	max-width: 1560px;
@@ -35,6 +39,7 @@ body {
 	padding: 0 20px;
 }
 main {
+	flex: 1 0 auto;
 	padding-top: 188px;
 	background: #fffbf2;
 	@media ($tablet2) {
@@ -59,6 +64,7 @@ main {
 @import "./blocks/title";
 @import "./blocks/item_cards";
 @import "./blocks/form";
+@import "./blocks/top_nav";
 
 @import "../components/header/header";
 @import "../components/footer/footer";
@@ -102,3 +108,14 @@ main {
 @import "../components/news_card/news_card";
 
 @import "../components/page_404/page_404";
+
+@import "../components/registration/registration";
+
+@import "../components/login/login";
+
+@import "../components/organization_profile/organization_profile";
+
+@import "../components/ordering/ordering";
+@import "../components/ordering/order_result/order_result";
+
+@import "../components/ordering_profiles/ordering_profiles";

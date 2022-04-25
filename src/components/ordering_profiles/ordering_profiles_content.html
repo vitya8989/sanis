@@ -1,0 +1,76 @@
+<div class="ordering_profiles__content">
+    <div class="top_nav">
+        <div class="top_nav__buttons">
+            <button class="top_nav__button js_feedback_popup_open" style="background: url('/img/top_nav/headphones.png') left center/ 25px 25px no-repeat">Связаться<br> с менеджером</button>
+            <a href="#" class="top_nav__button" style="background: url('/img/top_nav/exit.png') left center/ 25px 25px no-repeat">Выйти</a>
+        </div>
+        <div class="top_nav__title_links_wr">
+            <div class="top_nav__title_links">
+                <h1 class="top_nav__title_links_title">Профили заказов</h1>
+                <a href="#" class="top_nav__title_links_link">Данные организации</a>
+                <a href="#" class="top_nav__title_links_link">Все заказы</a>
+            </div>
+        </div>
+    </div>
+    <h3 class="ordering_profiles__title">редактирование профиля заказов</h3>
+    <form action="" class="ordering_profiles__form" name="ordering_profiles_form">
+        <div class="input_wr this--mt_20">
+            <label for="ordering_profiles_name" class="ordering_profiles__label input_label">ФИО *</label>
+            <input class="ordering_profiles__input text_input only_letter_rus js_validate" type="text" name="name" id="ordering_profiles_name" value="Константинов константин константинович">
+            <div class="ordering_profiles__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <label for="ordering_profiles_email" class="ordering_profiles__label input_label">E-mail *</label>
+            <input class="ordering_profiles__input text_input js_validate" type="email" name="email" id="ordering_profiles_email" value="test@mail.ru">
+            <div class="ordering_profiles__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <label for="ordering_profiles_tel" class="ordering_profiles__label input_label">Телефон *</label>
+            <input class="ordering_profiles__input text_input only_number js_validate" type="tel" name="tel" id="ordering_profiles_tel" value="+7 (900) 000-00-00">
+            <div class="ordering_profiles__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <label for="ordering_profiles_index" class="ordering_profiles__label input_label">Индекс *</label>
+            <input class="ordering_profiles__input text_input only_number" type="text" name="index" id="ordering_profiles_index" value="678767">
+            <div class="ordering_profiles__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <label for="ordering_profiles_region" class="ordering_profiles__label input_label">Регион *</label>
+            <select class="ordering_profiles__input select" name="region" id="ordering_profiles_region">
+                <option value="Удмуртская республика">Удмуртская республика</option>
+                <option value="Владимирская область">Владимирская область</option>
+                <option value="Приморский край">Приморский край</option>
+            </select>
+        </div>
+        <div class="input_wr">
+            <label for="ordering_profiles_city" class="ordering_profiles__label input_label">Город *</label>
+            <select class="ordering_profiles__input select" name="city" id="ordering_profiles_city">
+                <option value="Владивосток">Владивосток</option>
+                <option value="Москва">Москва</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                <option value="Владивосток">Владивосток</option>
+                <option value="Москва">Москва</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                <option value="Владивосток">Владивосток</option>
+                <option value="Москва">Москва</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+            </select>
+        </div>
+        <div class="input_wr">
+            <label for="ordering_profiles_address" class="ordering_profiles__label input_label">Адрес *</label>
+            <input class="ordering_profiles__input text_input js_validate" type="text" name="address" id="ordering_profiles_address" value="ворошилова, 76">
+            <div class="ordering_profiles__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <label for="ordering_profiles_pay" class="ordering_form__label input_label">Способ оплаты *</label>
+            <select class="ordering_profiles__input select" name="city" id="ordering_profiles_pay">
+                <option value="Картой онлайн">Картой онлайн</option>
+                <option value="Наличные при получении">Наличные при получении</option>
+                <option value="Банковский перевод">Банковский перевод</option>
+            </select>
+        </div>
+        <div class="input_wr">
+            <input type="submit" class="btn this--disabled this--width_300 this--center ordering_profiles__btn" value="сохранить изменения">
+        </div>
+    </form>
+</div>

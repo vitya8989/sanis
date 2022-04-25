@@ -1,0 +1,103 @@
+<div class="organization_profile__content">
+    <div class="top_nav">
+        <div class="top_nav__buttons">
+            <button class="top_nav__button js_feedback_popup_open" style="background: url('/img/top_nav/headphones.png') left center/ 25px 25px no-repeat">Связаться<br> с менеджером</button>
+            <a href="#" class="top_nav__button" style="background: url('/img/top_nav/exit.png') left center/ 25px 25px no-repeat">Выйти</a>
+        </div>
+        <div class="top_nav__title_links_wr">
+            <div class="top_nav__title_links">
+                <h1 class="top_nav__title_links_title">Данные организации</h1>
+                <a href="#" class="top_nav__title_links_link">Все заказы</a>
+                <a href="#" class="top_nav__title_links_link">Профили заказов</a>
+            </div>
+        </div>
+    </div>
+    <form action="" name="organization_profile_form" class="organization_profile__form">
+        <div class="input_wr">
+            <label for="organization_profile_old_password" class="registration_form__label input_label">Старый пароль *</label>
+            <input class="registration_form__input text_input js_validate" type="password" name="old_password" id="organization_profile_old_password">
+            <div class="registration_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <label for="organization_profile_password" class="registration_form__label input_label">Придумайте новый пароль *</label>
+            <input class="registration_form__input text_input js_validate" type="password" name="password" id="organization_profile_password">
+            <div class="registration_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <label for="organization_profile_confirm_password" class="registration_form__label input_label">Повторите пароль *</label>
+            <input class="registration_form__input text_input js_validate" type="password" name="confirm_password" id="organization_profile_confirm_password">
+            <div class="registration_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <input type="submit" class="btn this--center" value="сохранить">
+        </div>
+    </form>
+    <div class="organization_profile__bottom">
+        <form class="organization_profile__disabled_form" action="" name="organization_profile_disabled_form">
+            <div class="input_wr">
+                <label for="registration_name" class="registration_form__label input_label">ФИО *</label>
+                <input class="registration_form__input text_input only_letter_rus this--disabled" type="text" name="name" id="registration_name" disabled>
+            </div>
+            <div class="input_wr">
+                <label for="registration_email" class="registration_form__label input_label">E-mail *</label>
+                <input class="registration_form__input text_input this--disabled" type="email" name="email" id="registration_email" disabled>
+            </div>
+            <div class="input_wr">
+                <label for="registration_tel" class="registration_form__label input_label">Телефон *</label>
+                <input class="registration_form__input text_input only_number this--disabled" type="tel" name="tel" id="registration_tel" disabled>
+            </div>
+            <div class="input_wr">
+                <label for="registration_region" class="registration_form__label input_label">Регион *</label>
+                <select class="registration_form__input select this--disabled" name="region" id="registration_region" disabled>
+                    <option value="Удмуртская республика">Удмуртская республика</option>
+                    <option value="Владимирская область">Владимирская область</option>
+                    <option value="Приморский край">Приморский край</option>
+                </select>
+            </div>
+            <div class="input_wr">
+                <label for="registration_city" class="registration_form__label input_label">Город *</label>
+                <select class="registration_form__input select this--disabled" name="city" id="registration_city" disabled>
+                    <option value="Владивосток">Владивосток</option>
+                    <option value="Москва">Москва</option>
+                    <option value="Санкт-Петербург">Санкт-Петербург</option>
+                    <option value="Владивосток">Владивосток</option>
+                    <option value="Москва">Москва</option>
+                    <option value="Санкт-Петербург">Санкт-Петербург</option>
+                    <option value="Владивосток">Владивосток</option>
+                    <option value="Москва">Москва</option>
+                    <option value="Санкт-Петербург">Санкт-Петербург</option>
+                </select>
+            </div>
+            <div class="input_wr">
+                <label for="registration_index" class="registration_form__label input_label">Индекс *</label>
+                <input class="registration_form__input text_input only_number this--disabled" type="text" name="index" id="registration_index" disabled>
+            </div>
+            <div class="input_wr">
+                <label for="registration_company" class="registration_form__label input_label">Название компании *</label>
+                <input class="registration_form__input text_input this--disabled" type="text" name="company" id="registration_company" disabled>
+            </div>
+            <div class="radio_wr registration_form__radio_wr">
+                <input type="radio" name="sort" class="radio_input this--disabled" value="Юридическое лицо" id="radio_1" disabled>
+                <label class="registration_form__radio_label radio_input__label" for="radio_1">Юридическое лицо</label>
+                <input type="radio" name="sort" class="radio_input this--disabled" value="ИП" id="radio_2" disabled>
+                <label class="registration_form__radio_label radio_input__label" for="radio_2">ИП</label>
+            </div>
+            <div class="input_wr">
+                <label for="registration_inn" class="registration_form__label input_label">ИНН *</label>
+                <input class="registration_form__input text_input only_number this--disabled" type="text" name="inn" id="registration_inn" disabled>
+            </div>
+            <div class="input_wr">
+                <label for="registration_certificate" class="registration_form__label input_label">Свидетельство пробирной палаты *</label>
+                <input class="registration_form__input text_input this--disabled" type="text" name="certificate" id="registration_certificate" disabled>
+            </div>
+            <div class="input_wr">
+                <label for="registration_ogrn" class="registration_form__label input_label">ОГРН *</label>
+                <input class="registration_form__input text_input this--disabled" type="text" name="ogrn" id="registration_ogrn" disabled>
+            </div>
+        </form>
+        <div class="organization_profile__bottom_text">
+            Чтобы внести изменения в данные организации, обратитесь к нашему менеджеру по телефону
+            <a class="organization_profile__bottom_tel" href="tel:+78123634744">+7 (812) 363-47-44</a>
+        </div>
+    </div>
+</div>

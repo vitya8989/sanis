@@ -1,0 +1,102 @@
+<div class="ordering__content">
+    <h1 class="ordering__title">Оформление заказа</h1>
+    <div class="ordering__row">
+        <div class="ordering__left">
+            @@include('./order_result/order_result.html')
+        </div>
+        <div class="ordering__right">
+            <div class="ordering__subtitle">Выберите профиль заказа или создайте новый профиль</div>
+            <form action="" class="ordering__form ordering_form" name="ordering_form">
+                <div class="input_wr this--mt_20 this--uppercase">
+                    <label for="ordering_form_profile" class="ordering_form__label input_label">Профиль заказа</label>
+                    <select class="ordering_form__input select" name="ordering_profile" id="ordering_form_profile">
+                        <option value="Астрахань, Лесная, 143; Константинов">Астрахань, Лесная, 143; Константинов</option>
+                        <option value="Астрахань, Лесная, 143; Константинов">Астрахань, Лесная, 143; Константинов</option>
+                        <option value="Астрахань, Лесная, 143; Константинов">Астрахань, Лесная, 143; Константинов</option>
+                    </select>
+                </div>
+                <div class="ordering_form__line"></div>
+                <div class="input_wr">
+                    <label for="ordering_form_index" class="ordering_form__label input_label">Индекс *</label>
+                    <input class="ordering_form__input text_input only_number js_validate" type="text" name="index" id="ordering_form_index">
+                    <div class="ordering_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+                </div>
+                <div class="input_wr">
+                    <label for="ordering_form_region" class="ordering_form_form__label input_label">Регион *</label>
+                    <select class="ordering_form__input select" name="region" id="ordering_form_region">
+                        <option value="Удмуртская республика">Удмуртская республика</option>
+                        <option value="Владимирская область">Владимирская область</option>
+                        <option value="Приморский край">Приморский край</option>
+                    </select>
+                </div>
+                <div class="input_wr">
+                    <label for="ordering_form_city" class="ordering_form__label input_label">Город *</label>
+                    <select class="ordering_form__input select" name="city" id="ordering_form_city">
+                        <option value="Владивосток">Владивосток</option>
+                        <option value="Москва">Москва</option>
+                        <option value="Санкт-Петербург">Санкт-Петербург</option>
+                        <option value="Владивосток">Владивосток</option>
+                        <option value="Москва">Москва</option>
+                        <option value="Санкт-Петербург">Санкт-Петербург</option>
+                        <option value="Владивосток">Владивосток</option>
+                        <option value="Москва">Москва</option>
+                        <option value="Санкт-Петербург">Санкт-Петербург</option>
+                    </select>
+                </div>
+                <div class="input_wr">
+                    <label for="ordering_form_address" class="ordering_form__label input_label">Адрес *</label>
+                    <input class="ordering_form__input text_input js_validate" type="text" name="address" id="ordering_form_address">
+                    <div class="ordering_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+                </div>
+                <div class="input_wr">
+                    <label for="ordering_form_name" class="ordering_form__label input_label">ФИО *</label>
+                    <input class="ordering_form__input text_input only_letter_rus js_validate" type="text" name="name" id="ordering_form_name">
+                    <div class="ordering_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+                </div>
+                <div class="input_wr">
+                    <label for="ordering_form_tel" class="ordering_form__label input_label">Телефон *</label>
+                    <input class="ordering_form__input text_input only_number js_validate" type="tel" name="tel" id="ordering_form_tel">
+                    <div class="ordering_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+                </div>
+                <div class="input_wr">
+                    <label for="ordering_form_email" class="ordering_form__label input_label">E-mail *</label>
+                    <input class="ordering_form__input text_input js_validate" type="email" name="email" id="ordering_form_email">
+                    <div class="ordering_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+                </div>
+                <div class="input_wr">
+                    <label for="ordering_form_pay" class="ordering_form__label input_label">Способ оплаты *</label>
+                    <select class="ordering_form__input select" name="city" id="ordering_form_pay">
+                        <option value="Картой онлайн">Картой онлайн</option>
+                        <option value="Наличные при получении">Наличные при получении</option>
+                        <option value="Банковский перевод">Банковский перевод</option>
+                    </select>
+                </div>
+                <div class="ordering_form__line"></div>
+                <div class="input_wr">
+                    <label for="ordering_form_date" class="ordering_form__label input_label">Дата доставки *</label>
+                    <select class="ordering_form__input select" name="city" id="ordering_form_date">
+                        <option value="01.05.2022">01.05.2022</option>
+                        <option value="02.05.2022">02.05.2022</option>
+                        <option value="03.05.2022">03.05.2022</option>
+                        <option value="04.05.2022">04.05.2022</option>
+                        <option value="05.05.2022">05.05.2022</option>
+                        <option value="06.05.2022">06.05.2022</option>
+                        <option value="07.05.2022">07.05.2022</option>
+                        <option value="08.05.2022">08.05.2022</option>
+                        <option value="09.05.2022">09.05.2022</option>
+                        <option value="10.05.2022">10.05.2022</option>
+                    </select>
+                </div>
+                <div class="input_wr">
+                    <label for="ordering_form_comment" class="ordering_form__label input_label">Комментарий к заказу</label>
+                    <div class="textarea_wr">
+                        <textarea name="" class="ordering_form__textarea textarea" id="ordering_form_comment" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="input_wr">
+                    <input type="submit" class="btn this--width_300 this--center" value="завершить оформление">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

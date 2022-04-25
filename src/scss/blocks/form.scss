@@ -1,17 +1,31 @@
+.input_wr {
+  margin-top: 25px;
+  position: relative;
+
+  &.this--mt_20 {
+    margin-top: 20px;
+
+    @media($mobile) {
+      margin-top: 15px;
+    }
+  }
+}
 .text_input {
   background: #FFFFFF;
   border: 1px solid #D1D1D1;
   border-radius: 30px;
   width: 100%;
   height: 60px;
-  padding: 0 20px;
+  padding: 0 18px 0 20px;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.56;
   position: relative;
+  transition: 0.2s;
   &:hover {
     @media ($tablet2Max) {
       border: 1px solid #F9C859;
+      background: #FFFBF2;
     }
   }
   &:focus {
@@ -20,9 +34,34 @@
   &.error-input {
     border: 1px solid #A61616;
   }
+  &.this--disabled {
+    background: #F6F8FB;
+    border: 1px solid #B8B8B8;
+    pointer-events: none;
+    &:hover {
+      @media ($tablet2Max) {
+        border: 1px solid #B8B8B8;
+        background: #F6F8FB;
+      }
+    }
+  }
+}
+.input_label,
+.text_input {
+  display: block;
+}
+.input_label {
+  margin-bottom: 5px;
+
+  &.error-input {
+    color: #A61616;
+  }
 }
 .input_error_message {
   display: none;
+  position: absolute;
+  bottom: -18px;
+  left: 0;
 }
 .text_input.error-input + .input_error_message {
   display: flex;
@@ -46,4 +85,354 @@
   margin-top: 2px;
   line-height: 1.33;
   color: #A61616;
+}
+
+.input_wr {
+  .SumoSelect {
+    width: 100%;
+    position: relative;
+    .CaptionCont {
+      height: 63px;
+      display: flex;
+      background-color: #ffffff;
+      border: 1px solid #D1D1D1;
+      border-radius: 30px;
+      cursor: pointer;
+      align-items: center;
+      width: 100%;
+      max-width: 100%;
+      padding: 0 25px 0 30px;
+      transition: background 0.2s;
+
+
+      span {
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 1.56;
+        color: #000000;
+
+        @media ($mobile) {
+          font-size: 1.4rem;
+          line-height: 2;
+        }
+      }
+      label {
+        width: 13px;
+        right: 25px;
+      }
+      label i {
+        transition: 0.2s;
+        width: 13px;
+        height: 8px;
+        background: url("/img/main/icons/white_arrow_down_gray.svg") 0 0/ 100% 100% no-repeat;
+      }
+      &:hover {
+        @media ($tablet2Max) {
+          background: #FFFBF2;
+          label i {
+            background: url("/img/main/icons/white_arrow_down_hov.svg") 0 0/ 100% 100% no-repeat;
+          }
+        }
+      }
+    }
+
+    .optWrapper {
+      display: none;
+      position: absolute;
+      top: 62px;
+      left: 0;
+      padding: 5px 30px 20px 20px;
+      max-height: 304px;
+      overflow-y: auto;
+      z-index: 1;
+      background: #FFFFFF;
+      border-radius: 0 0 30px 30px;
+      width: 100%;
+      border: 1px solid #F9C859;
+      border-top: none;
+      @media ($mobile2) {
+       z-index: 2;
+      }
+
+      ::-webkit-scrollbar {
+        border-radius: 4px;
+        width: 4px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #F6F8FB;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background:  #F9C859;
+        border-radius: 4px;
+      }
+      .options {
+        max-height: 240px;
+      }
+    }
+
+    .opt {
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 1.56;
+      color: #000000;
+      padding: 11px 10px !important;
+      border: none !important;
+      margin-right: 15px;
+      @media ($mobile) {
+        font-size: 1.4rem;
+        line-height: 2;
+      }
+      &:hover {
+        background-color: #F9C859 !important;
+        border-radius: 5px !important;
+      }
+      &.selected {
+        font-weight: 700;
+      }
+    }
+    &.disabled {
+      .CaptionCont {
+        background: #F6F8FB;
+        border: 1px solid #B8B8B8;
+        pointer-events: none;
+        &:hover {
+          @media ($tablet2Max) {
+            background: #F6F8FB;
+            label i {
+              background: url("/img/main/icons/white_arrow_down_gray.svg") 0 0/ 100% 100% no-repeat;
+            }
+          }
+        }
+      }
+    }
+  }
+  .SumoSelect.open {
+    .CaptionCont label i {
+      transform: rotate(180deg);
+    }
+    .optWrapper {
+      top: 62px;
+    }
+  }
+  .SumoSelect:focus > .CaptionCont,
+  .SumoSelect:hover > .CaptionCont,
+  .SumoSelect.open > .CaptionCont {
+    box-shadow: none;
+    border-color: #F9C859;
+  }
+  .SumoSelect.open > .optWrapper {
+    box-shadow: none;
+  }
+  .SumoSelect.disabled:hover > .CaptionCont {
+    border-color: #B8B8B8;
+  }
+  .SumoSelect.open > .CaptionCont {
+    border-radius: 30px 30px 0 0;
+    border-bottom: none;
+    label i {
+      background: url("/img/main/icons/white_arrow_down_hov.svg") 0 0/ 100% 100% no-repeat;
+    }
+  }
+  .SumoSelect.open:hover > .CaptionCont {
+    background-color: #ffffff;
+  }
+  &.this--uppercase {
+    .SumoSelect {
+      .CaptionCont {
+        span {
+          text-transform: uppercase;
+        }
+      }
+      .opt {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.radio_wr {
+  margin-top: 15px;
+}
+.radio_input {
+  display: none;
+}
+.radio_input__label {
+  font-weight: 400;
+  line-height: 1.31;
+  padding: 7px 0 7px 35px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    left: 0;
+    top: 50%;
+    background: #FFFFFF;
+    border: 1px solid #F9C859;
+    border-radius: 20px;
+    transition: 0.3s;
+    transform: translateY(-50%);
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    width: 9px;
+    height: 9px;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FFFBF2;
+    border-radius: 20px;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &:hover {
+    @media ($tablet2Max) {
+      color: #A27207;
+      &::before {
+        background: #FFFBF2;
+      }
+    }
+  }
+}
+
+.radio_input:checked + .radio_input__label {
+  &::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  &::before {
+    background: #F9C859;
+  }
+}
+
+.radio_input.this--disabled + .radio_input__label {
+  pointer-events: none;
+  &::before {
+    background: #F6F8FB;
+    border: 1px solid #B8B8B8;
+  }
+  &:hover {
+    @media ($tablet2Max) {
+      color: #000000;
+      &::before {
+        background: #F6F8FB;
+      }
+    }
+  }
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox_label {
+  display: block;
+  font-weight: 400;
+  line-height: 1.31;
+  padding: 8px 0 6px 35px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 5px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    left: 0;
+    top: 17px;
+    background: #FFFFFF;
+    border: 1px solid #F9C859;
+    transition: 0.3s;
+    transform: translateY(-50%);
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    width: 9px;
+    height: 9px;
+    left: 8px;
+    top: 17px;
+    transform: translateY(-50%);
+    background: #FFFBF2;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    @media ($tablet2) {
+      display: none;
+    }
+  }
+  &:hover {
+    @media ($tablet2Max) {
+      color: #A27207;
+      &::before {
+        background: #FFFBF2;
+      }
+    }
+  }
+}
+.checkbox:checked + .checkbox_label  {
+  &::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  &::before {
+    background: #F9C859;
+  }
+}
+.textarea_wr {
+  background: #FFFFFF;
+  border: 1px solid #D1D1D1;
+  border-radius: 30px;
+  padding: 20px;
+  height: 172px;
+  transition: 0.2s;
+
+  &:hover {
+    @media ($tablet2Max) {
+      border: 1px solid #F9C859;
+      background: #FFFBF2;
+      .textarea {
+        background: #FFFBF2;
+      }
+    }
+  }
+  &.focus {
+    border: 1px solid #F9C859;
+  }
+}
+.textarea {
+  width: 100%;
+  resize: none;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.56;
+  max-height: 100%;
+  padding: 0 10px 0 0;
+  transition: 0.2s;
+
+  &::-webkit-scrollbar {
+    border-radius: 4px;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #F6F8FB;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background:  #F9C859;
+    border-radius: 4px;
+  }
 }

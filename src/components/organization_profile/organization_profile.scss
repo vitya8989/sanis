@@ -1,0 +1,37 @@
+.organization_profile__form {
+  max-width: 500px;
+}
+.organization_profile__bottom {
+  display: flex;
+  margin-top: 25px;
+  @media ($tablet2) {
+    flex-direction: column-reverse;
+    margin-top: 40px;
+  }
+}
+.organization_profile__disabled_form {
+  width: 500px;
+  flex: 0 0 auto;
+  @media ($mobile) {
+    width: 100%;
+    flex: 0 1 auto;
+  }
+}
+.organization_profile__bottom_text {
+  margin-top: 50px;
+  margin-left: 50px;
+  max-width: 370px;
+  @media ($tablet2) {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+.organization_profile__bottom_tel {
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.4;
+  color: #4A4A4A;
+  margin-top: 5px;
+}

@@ -1,0 +1,27 @@
+.registration__container {
+  max-width: 500px;
+}
+.registration__subtitle {
+  margin-top: 25px;
+  text-align: center;
+}
+.registration_form__radio_wr {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -40px;
+}
+.registration_form__radio_label {
+  margin-left: 40px;
+}
+.registration_checkbox_label {
+  font-size: 1.4rem;
+  a {
+    color: #000000;
+    text-decoration: underline;
+    &:hover {
+      @media($tablet2Max) {
+        text-decoration: none;
+      }
+    }
+  }
+}

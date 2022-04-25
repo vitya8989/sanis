@@ -1,0 +1,16 @@
+.login__container {
+  max-width: 500px;
+}
+.login_form__link_wr {
+  text-align: center;
+  margin-top: 10px;
+}
+.login_form__link {
+  color: #000000;
+  text-decoration: underline;
+  &:hover {
+    @media($tablet2Max) {
+      text-decoration: none;
+    }
+  }
+}

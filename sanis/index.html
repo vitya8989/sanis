@@ -300,7 +300,7 @@
                         <img src="/img/main/three_steps/1.svg" alt="">
                     </div>
                     <div class="three_steps__item_text">Оставьте свою заявку</div>
-                    <div class="three_steps__item_btn btn js_feedback_popup_open"><span>оставить заявку</span></div>
+                    <button class="three_steps__item_btn btn js_feedback_popup_open"><span>оставить заявку</span></button>
                 </div>
                 <div class="three_steps__item">
                     <div class="three_steps__item_img">
@@ -1201,14 +1201,14 @@
             Оставить заявку на заключение договора
         </div>
         <form class="feedback_popup__form feedback_form" action="">
-            <div class="feedback_form__input_wr">
-                <label for="feedback_name" class="feedback_form__label">Имя *</label>
-                <input class="feedback_form__input text_input only_letter_rus" type="text" name="name" id="feedback_name">
+            <div class="feedback_form__input_wr input_wr">
+                <label for="feedback_name" class="feedback_form__label input_label">Имя *</label>
+                <input class="feedback_form__input text_input only_letter_rus js_validate" type="text" name="name" id="feedback_name">
                 <div class="feedback_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
             </div>
-            <div class="feedback_form__input_wr">
-                <label for="feedback_tel" class="feedback_form__label">Телефон *</label>
-                <input class="feedback_form__input text_input only_number" type="text" name="name" id="feedback_tel">
+            <div class="feedback_form__input_wr input_wr">
+                <label for="feedback_tel" class="feedback_form__label input_label">Телефон *</label>
+                <input class="feedback_form__input text_input only_number js_validate" type="text" name="name" id="feedback_tel">
                 <div class="feedback_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
             </div>
             <div class="feedback_form__agreement">

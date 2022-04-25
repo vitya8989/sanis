@@ -1,0 +1,92 @@
+<div class="registration__content">
+    <h1 class="this--center_all registration__title">Регистрация</h1>
+    <div class="registration__subtitle">Заявка на партнерство</div>
+    <form action="" class="registration__form registration_form" name="registration-form">
+        <div class="input_wr">
+            <label for="registration_name" class="registration_form__label input_label">ФИО *</label>
+            <input class="registration_form__input text_input only_letter_rus js_validate" type="text" name="name" id="registration_name">
+            <div class="registration_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <label for="registration_email" class="registration_form__label input_label">E-mail *</label>
+            <input class="registration_form__input text_input js_validate" type="email" name="email" id="registration_email">
+            <div class="registration_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <label for="registration_tel" class="registration_form__label input_label">Телефон *</label>
+            <input class="registration_form__input text_input only_number js_validate" type="tel" name="tel" id="registration_tel">
+            <div class="registration_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <label for="registration_region" class="registration_form__label input_label">Регион *</label>
+            <select class="registration_form__input select" name="region" id="registration_region">
+                <option value="Удмуртская республика">Удмуртская республика</option>
+                <option value="Владимирская область">Владимирская область</option>
+                <option value="Приморский край">Приморский край</option>
+            </select>
+        </div>
+        <div class="input_wr">
+            <label for="registration_city" class="registration_form__label input_label">Город *</label>
+            <select class="registration_form__input select" name="city" id="registration_city">
+                <option value="Владивосток">Владивосток</option>
+                <option value="Москва">Москва</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                <option value="Владивосток">Владивосток</option>
+                <option value="Москва">Москва</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                <option value="Владивосток">Владивосток</option>
+                <option value="Москва">Москва</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+            </select>
+        </div>
+        <div class="input_wr">
+            <label for="registration_index" class="registration_form__label input_label">Индекс *</label>
+            <input class="registration_form__input text_input only_number" type="text" name="index" id="registration_index">
+            <div class="registration_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <label for="registration_company" class="registration_form__label input_label">Название компании *</label>
+            <input class="registration_form__input text_input" type="text" name="company" id="registration_company">
+            <div class="registration_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="radio_wr registration_form__radio_wr">
+            <input type="radio" name="sort" class="radio_input" value="Юридическое лицо" id="radio_1">
+            <label class="registration_form__radio_label radio_input__label" for="radio_1">Юридическое лицо</label>
+            <input type="radio" name="sort" class="radio_input" value="ИП" id="radio_2">
+            <label class="registration_form__radio_label radio_input__label" for="radio_2">ИП</label>
+        </div>
+        <div class="input_wr">
+            <label for="registration_inn" class="registration_form__label input_label">ИНН *</label>
+            <input class="registration_form__input text_input only_number" type="text" name="inn" id="registration_inn">
+            <div class="registration_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <label for="registration_certificate" class="registration_form__label input_label">Свидетельство пробирной палаты *</label>
+            <input class="registration_form__input text_input" type="text" name="certificate" id="registration_certificate">
+            <div class="registration_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <label for="registration_ogrn" class="registration_form__label input_label">ОГРН *</label>
+            <input class="registration_form__input text_input" type="text" name="ogrn" id="registration_ogrn">
+            <div class="registration_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <label for="registration_password" class="registration_form__label input_label">Придумайте пароль *</label>
+            <input class="registration_form__input text_input js_validate" type="password" name="password" id="registration_password">
+            <div class="registration_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <label for="registration_confirm_password" class="registration_form__label input_label">Повторите пароль *</label>
+            <input class="registration_form__input text_input js_validate" type="password" name="confirm_password" id="registration_confirm_password">
+            <div class="registration_form__input_error_message input_error_message"><span class="input_error_message__icon">!</span><span class="input_error_message__text">Заполните поле</span></div>
+        </div>
+        <div class="input_wr">
+            <input type="checkbox" id="agreement" class="checkbox">
+            <label class="registration_checkbox_label checkbox_label" for="agreement">Я ознакомился с <a href="#">Условиями сайта</a> и согласен с
+                <a href="#">Политикой конфиденциальности</a></label>
+        </div>
+        <div class="input_wr">
+            <input type="submit" class="btn this--width_300 this--center" value="зарегистрироваться">
+        </div>
+    </form>
+</div>
