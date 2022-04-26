@@ -29,7 +29,7 @@
   display: flex;
   margin-left: -20px;
 
-  @media($tablet2) {
+  @media($tablet) {
     display: block;
     margin-left: 0;
   }
@@ -37,7 +37,7 @@
 
 .footer__menu_item {
   margin-left: 20px;
-  @media($tablet2) {
+  @media($tablet) {
     margin-left: 0;
   }
   @media($mobile) {
@@ -135,7 +135,7 @@
 .footer__contacts {
   text-align: center;
   margin-right: 172px;
-  @media($tablet2) {
+  @media($tablet) {
     margin-right:0;
     margin-left: 30px;
   }
@@ -197,4 +197,17 @@
   .footer__content.this--header & {
     color: #000000;
   }
+}
+
+.footer__logo {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+}
+.footer__logo_text {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.71;
+  color: #FFFFFF;
+  margin-right: 7px;
 }
