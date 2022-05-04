@@ -28,6 +28,13 @@
     width: 335px;
   }
 }
+.ordering__prev_btn {
+  margin: 0 0 30px;
+  width: 250px;
+  @media($tablet2) {
+    margin: 0 auto 20px;
+  }
+}
 .ordering__right {
   width: 500px;
   @media($tablet2) {
