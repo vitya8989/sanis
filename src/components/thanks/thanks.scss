@@ -1,0 +1,123 @@
+.thanks__subtitle {
+  text-align: center;
+  margin-top: 25px;
+  @media ($mobile) {
+    margin-top: 15px;
+    font-size: 1.4rem;
+  }
+}
+.thanks__body {
+  background: #FFFFFF;
+  border: 2px solid #F9C859;
+  border-radius: 10px;
+  margin: 20px auto 0;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1020px;
+  @media ($mobile) {
+    padding: 20px;
+  }
+}
+.thanks__left {
+  width: calc(50% - 60px);
+  margin-right: 60px;
+  margin-bottom: -20px;
+
+  @media ($tablet2) {
+    width: calc(50% - 20px);
+    margin-right: 20px;
+  }
+  @media ($tablet3) {
+    width: 100%;
+    margin-right: 0;
+  }
+  @media ($mobile) {
+    margin-bottom: -15px;
+  }
+
+  .thanks__item {
+    margin-bottom: 20px;
+    @media ($mobile) {
+      margin-bottom: 15px;
+    }
+    .thanks__value {
+      margin-top: 5px;
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 1.4;
+
+      &.this--line_through {
+        text-decoration: line-through;
+      }
+      @media ($mobile) {
+        font-size: 1.6rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+.thanks__left_columns {
+  display: flex;
+  margin-left: -20px;
+  @media ($tablet3) {
+   max-width: 500px;
+  }
+}
+.thanks__left_column {
+  width: calc(50% - 20px);
+  margin-left: 20px;
+}
+.thanks__right {
+  width: calc(50% - 60px);
+  margin-left: 60px;
+  margin-bottom: -10px;
+
+  @media ($tablet2) {
+    width: calc(50% - 20px);
+    margin-left: 20px;
+  }
+  @media ($tablet3) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  .thanks__item {
+    margin-bottom: 10px;
+    .thanks__value {
+      margin-top: 5px;
+      font-weight: 600;
+      @media ($mobile) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+.thanks__bottom {
+  width: 100%;
+  margin-top: 30px;
+  .thanks__item {
+    .thanks__value {
+      margin-top: 10px;
+      @media ($mobile) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+.thanks__label {
+  color: #4A4A4A;
+  @media ($mobile) {
+    font-size: 1.4rem;
+  }
+}
+
+
+.thanks__btn {
+  width: 270px;
+  margin: 40px auto 0;
+  @media ($mobile) {
+    margin: 30px auto 0;
+  }
+}

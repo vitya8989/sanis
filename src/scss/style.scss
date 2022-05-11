@@ -102,6 +102,7 @@ main {
 
 @import "../components/about_page/about_page_top/about_page_top";
 @import "../components/about_page/about_page_certificates/about_page_certificates";
+@import "../components/about_page/about_page_reviews/about_page_reviews";
 
 @import "../components/feedback_popup/feedback_popup";
 
@@ -119,3 +120,17 @@ main {
 @import "../components/ordering/order_result/order_result";
 
 @import "../components/ordering_profiles/ordering_profiles";
+
+@import "../components/thanks/thanks";
+
+@import "../components/all_orders/all_orders";
+@import "../components/all_orders/all_orders_cards/all_orders_cards";
+
+@import "../components/ordering_profiles_all/ordering_profiles_all";
+@import "../components/ordering_profiles_all/profiles_cards/profiles_cards";
+
+@import "../components/ordering_profiles_detail/ordering_profiles_detail";
+
+@import "../components/basket/basket";
+
+@import "../components/order_detail/order_detail";

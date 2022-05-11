@@ -18,9 +18,11 @@
   cursor: pointer;
 
   &:hover {
-    border: 2px solid #D59A14;
-    background: #D59A14;
-    color: #ffffff;
+    @media ($tablet2Max) {
+      border: 2px solid #D59A14;
+      background: #D59A14;
+      color: #ffffff;
+    }
   }
 
   &.this--wh {

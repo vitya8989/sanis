@@ -259,6 +259,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media ($mobile) {
+    margin-top: 30px;
+  }
 }
 .catalog__show_counts {
   font-weight: 400;
@@ -271,6 +274,9 @@
 }
 .catalog__next_btn {
   margin-top: 10px;
+  &.this--mt_0 {
+    margin-top: 0;
+  }
 }
 .catalog__pagination {
   margin-top: 20px;

@@ -79,6 +79,10 @@
   color: #ffffff;
   font-size: 1.1rem;
   font-weight: 700;
+
+  &.this--black {
+    background: #000000;
+  }
 }
 .input_error_message__text {
   font-size: 1.2rem;

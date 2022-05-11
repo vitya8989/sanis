@@ -97,8 +97,10 @@ if (onlyNumber) {
         });
     }
 }
-
-$('.select').SumoSelect();
+let select = document.querySelectorAll('.select');
+if (select.length > 0) {
+    $('.select').SumoSelect();
+}
 
 function validateForm(inputs) {
     for (let i = 0; i < inputs.length; i++) {

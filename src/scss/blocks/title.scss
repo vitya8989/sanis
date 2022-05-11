@@ -40,6 +40,11 @@ h2 {
     transform: translateX(-50%);
     background: #F9C859;
   }
+  &.this--no_line {
+    &::before {
+      display: none;
+    }
+  }
 }
 
 h4 {

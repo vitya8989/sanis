@@ -1,0 +1,241 @@
+.all_orders__cards {
+  margin-top: 20px;
+}
+.all_orders__cards_labels {
+  display: flex;
+  padding: 0 30px;
+  margin-left: -10px;
+  @media ($desktop) {
+    display: none;
+  }
+}
+.all_orders__cards_labels_half {
+  width: calc(50% - 10px);
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.all_orders__cards_label {
+  padding-right: 10px;
+  color: #4A4A4A;
+  font-size: 1.4rem;
+  width: 100px;
+  &.this--pr_0 {
+    padding-right: 0;
+  }
+  &.this--width_150 {
+    width: 150px;
+  }
+  &.this--width_200 {
+    width: 200px;
+  }
+  &.this--width_full {
+    flex: 1 1 auto;
+    max-width: 510px;
+    @media ($desktopBig) {
+      max-width: 400px;
+    }
+  }
+}
+.all_orders__cards_label_group {
+  display: flex;
+}
+.all_orders__cards_label_group_item:first-child {
+  margin-right: 40px;
+}
+
+.all_orders__cards_cards {
+  margin-top: 10px;
+  &.this--mt_15 {
+    margin-top: 15px;
+  }
+}
+.all_orders__cards_card {
+  margin-bottom: 5px;
+}
+.all_orders_card {
+  background: #FFFFFF;
+  border: 1px solid #F6F8FB;
+  border-radius: 10px;
+  padding: 14px 30px;
+  display: flex;
+  margin-left: -10px;
+  @media ($desktop) {
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+  @media ($tablet3) {
+    padding: 20px 90px 25px 20px;
+    position: relative;
+  }
+}
+.all_orders_card__half {
+  width: calc(50% - 10px);
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  @media ($desktop) {
+    margin-left: 0;
+    width: 100%;
+    &:first-child {
+      margin-bottom: 20px;
+      @media ($tablet3) {
+        display: block;
+        margin-bottom: -15px;
+      }
+    }
+  }
+  @media ($tablet3) {
+    display: block;
+  }
+}
+.all_orders_card__value {
+  width: 100px;
+  padding-right: 10px;
+  @media ($tablet3) {
+    width: 100%;
+    padding-right: 0;
+    display: flex;
+    margin-bottom: 15px;
+  }
+  @media ($mobile) {
+    font-size: 1.4rem;
+  }
+  &.this--uppercase {
+    text-transform: uppercase;
+  }
+  &.this--width_150 {
+    width: 150px;
+    @media ($tablet3) {
+      width: 100%;
+    }
+  }
+  &.this--width_200 {
+    width: 200px;
+    @media ($tablet3) {
+     margin-bottom: 0;
+    }
+  }
+  &.this--pr_0 {
+    padding-right: 0;
+  }
+  &.this--width_full {
+    flex: 1 1 auto;
+    max-width: 510px;
+    @media ($desktopBig) {
+      max-width: 400px;
+    }
+    @media ($desktop) {
+      max-width: none;
+      margin-right: 30px;
+      align-self: center;
+    }
+    @media ($tablet3) {
+      display: none;
+    }
+  }
+}
+a.all_orders_card__value {
+  color: #A27207;
+  transition: 0.3s;
+
+  .all_orders_card__value_mob_label {
+    color: #000000;
+  }
+  &:hover {
+    @media ($tablet2Max) {
+      color: #D59A14;
+    }
+  }
+}
+.all_orders_card__value_mob_label {
+  @media ($tablet3Max) {
+    display: none;
+  }
+  @media ($tablet3) {
+    width: 50px;
+    margin-right: 15px;
+  }
+}
+.all_orders_card__value_group {
+  display: flex;
+}
+.all_orders_card__value_group_link {
+  width: 45px;
+  height: 45px;
+  flex: 0 0 auto;
+  margin-right: 30px;
+  @media ($tablet3) {
+    display: none;
+  }
+  &:hover {
+    @media ($tablet2Max) {
+      svg {
+        .path_arrow {
+          fill: #000000;
+        }
+        .path_arrow_bg {
+          fill: #F9C859;
+        }
+      }
+    }
+  }
+  &:active {
+    background: #F6F8FB;
+    svg {
+      .path_bg {
+        fill: #d1d1d1;
+      }
+    }
+  }
+  .path_arrow,
+  .path_arrow_bg,
+  .path_bg {
+    transition: 0.2s;
+  }
+}
+
+.all_orders_card__link_arrow {
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #F9C859;
+  position: relative;
+  transition: 0.2s;
+  background: #ffffff;
+  margin-right: 0;
+  @media ($tablet3) {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  &:hover {
+    @media ($tablet2Max) {
+      background: #D59A14;
+      border: 1px solid #D59A14;
+      &::before,
+      &::after {
+        background: #FFFFFF;
+      }
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background: #000000;
+    left: calc(50% - 4px);
+    transition: 0.2s;
+  }
+  &::before {
+    top: 18px;
+    transform: rotate(45deg);
+  }
+  &::after {
+    bottom: 18px;
+    transform: rotate(-45deg);
+  }
+}

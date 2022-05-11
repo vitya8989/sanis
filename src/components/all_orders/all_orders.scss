@@ -1,0 +1,70 @@
+.all_orders__top_links {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: -10px;
+  margin-top: 15px;
+  @media ($mobile) {
+    margin-top: 22px;
+    margin-left: -15px;
+  }
+  &.this--mt_0 {
+    margin-top: 0;
+  }
+}
+.all_orders__top_link {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #F6F8FB;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: 0.3s;
+  @media ($mobile) {
+    margin-left: 15px;
+  }
+  &:hover {
+    @media ($tablet2Max) {
+      border: 1px solid #F9C859;
+      svg {
+        .path_arrow {
+          fill: #000000;
+        }
+        .path_arrow_bg {
+          fill: #F9C859;
+        }
+      }
+    }
+  }
+  &:active {
+    background: #F6F8FB;
+    svg {
+      .path_bg {
+        fill: #d1d1d1;
+      }
+    }
+  }
+  .path_arrow,
+  .path_arrow_bg,
+  .path_bg {
+    transition: 0.2s;
+  }
+
+  svg {
+    margin-right: 15px;
+    transition: 0.3s;
+    flex: 0 0 auto;
+    @media ($mobile) {
+      line-height: 1.43;
+      margin-right: 5px;
+    }
+  }
+  span {
+    color: #4A4A4A;
+    font-size: 1.4rem;
+    line-height: 1.71;
+    @media ($mobile) {
+      line-height: 1.43;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.ordering_profiles_all__cards {
+  margin-top: 35px;
+  @media ($mobile) {
+    margin-top: 20px;
+  }
+}
+.ordering_profiles_all__btn {
+  margin: 40px 0 0 0;
+  @media ($mobile) {
+    margin: 20px auto 0;
+  }
+}
